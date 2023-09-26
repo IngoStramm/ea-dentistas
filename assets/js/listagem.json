@@ -1,0 +1,1667 @@
+[
+    {
+        "id": "488",
+        "nome": "C & I ESPACO ODONTOLOGICO LTDA",
+        "telefone": "55 (11) 5573-7774",
+        "endereco": "R DR NETO DE ARAÚJO - 320 - CJ 208",
+        "endereco_completo": "R DR NETO DE ARAÚJO - 320 - CJ 208, 04111-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04111-001",
+        "email": "contato@odontociop.com.br",
+        "distancia": 0.38,
+        "LatLng": {
+            "lat": -23.5878166,
+            "lng": -46.6321506
+        }
+    },
+    {
+        "id": "480",
+        "nome": "CRISTIANE MARIA REIS MAGALHAES",
+        "telefone": "55 (11) 99212-2128",
+        "endereco": "RUA CAPITAO MACEDO - 364",
+        "endereco_completo": "RUA CAPITAO MACEDO - 364, 04021-020, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04021-020",
+        "email": "lacrigu@gmail.com",
+        "distancia": 0.89,
+        "LatLng": {
+            "lat": -23.5929352,
+            "lng": -46.6432116
+        }
+    },
+    {
+        "id": "397",
+        "nome": "SORRIA VITTA ODONTOLOGIA INTEGRADA",
+        "telefone": "55 (11) 2386-2356",
+        "endereco": "AV PRF NOÉ AZEVEDO - 208 - 9º ANDAR CONJ 95",
+        "endereco_completo": "AV PRF NOÉ AZEVEDO - 208 - 9º ANDAR CONJ 95, 04117-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04117-000",
+        "email": "adm@sorriavitta.com.br",
+        "distancia": 0.11,
+        "LatLng": {
+            "lat": -23.5885972,
+            "lng": -46.6348409
+        }
+    },
+    {
+        "id": "406",
+        "nome": "FABRICIA SILVA DE DEUS",
+        "telefone": "55 (11) 7740-4621",
+        "endereco": "R. CUBATAO - 929 - SL 74",
+        "endereco_completo": "R. CUBATAO - 929 - SL 74, 04013-043, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04013-043",
+        "email": "fabriciasd@gmail.com",
+        "distancia": 1.23,
+        "LatLng": {
+            "lat": -23.579963,
+            "lng": -46.6416093
+        }
+    },
+    {
+        "id": "273",
+        "nome": "BELO SORRISO CLINICA",
+        "telefone": "55 (11) 5089-5089",
+        "endereco": "R DR NETO DE ARAUJO - 320 - CONJ 109",
+        "endereco_completo": "R DR NETO DE ARAUJO - 320 - CONJ 109, 04111-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04111-001",
+        "email": "danielamoura2@terra.com.br",
+        "distancia": 0.38,
+        "LatLng": {
+            "lat": -23.5878183,
+            "lng": -46.6321696
+        }
+    },
+    {
+        "id": "22",
+        "nome": "NIVALDO VANNI FILHO",
+        "telefone": "(16) 99734-9210",
+        "endereco": "Av República do Líbano, 1673 Moema",
+        "endereco_completo": "Av República do Líbano, 1673 Moema, 04501-001, Sao Paulo - SP",
+        "cidade_estado": "Sao Paulo - SP",
+        "cep": "04501-001",
+        "email": "nivaldovanni@hotmail.com",
+        "distancia": 3,
+        "LatLng": {
+            "lat": -23.595358,
+            "lng": -46.6641121
+        }
+    },
+    {
+        "id": "1281",
+        "nome": "R. M. MAGNANELLI ODONTOLOGIA LTDA",
+        "telefone": "55 (11) 99500-0771",
+        "endereco": "RUA SAMPAIO VIANA - 202",
+        "endereco_completo": "RUA SAMPAIO VIANA - 202, 04004-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04004-000",
+        "email": "adm.magnanelliodontologia@gmail.com",
+        "distancia": 2.1,
+        "LatLng": {
+            "lat": -23.5732882,
+            "lng": -46.6459351
+        }
+    },
+    {
+        "id": "38",
+        "nome": "ERIKA FRANCO DE PAULA",
+        "telefone": "55 (11) 99475-2816",
+        "endereco": "RUA IARA - 123 - AP 91 HORTENSIA",
+        "endereco_completo": "RUA IARA - 123 - AP 91 HORTENSIA, 04542-030, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04542-030",
+        "email": "draerikadepaula@gmail.com",
+        "distancia": 2.32,
+        "LatLng": {
+            "lat": -23.5707301,
+            "lng": -46.6454256
+        }
+    },
+    {
+        "id": "440",
+        "nome": "DEBORA MIDORI NOMOTO",
+        "telefone": "55 (11) 5581-0879",
+        "endereco": "RUA MARTINS DE SA - 67",
+        "endereco_completo": "RUA MARTINS DE SA - 67, 04128-070, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04128-070",
+        "email": "deboranomoto@gmail.com",
+        "distancia": 1.54,
+        "LatLng": {
+            "lat": -23.6032827,
+            "lng": -46.6342911
+        }
+    },
+    {
+        "id": "401",
+        "nome": "NAGAI ODONTOLOGIA LTDA",
+        "telefone": "55 (11) 5071-1544",
+        "endereco": "R AFONSO CELSO - 1221 - CONJ 43",
+        "endereco_completo": "R AFONSO CELSO - 1221 - CONJ 43, 04119-061, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04119-061",
+        "email": "rogernagai@gmail.com",
+        "distancia": 1.43,
+        "LatLng": {
+            "lat": -23.6023467,
+            "lng": -46.6348048
+        }
+    },
+    {
+        "id": "360",
+        "nome": "KATIA MARIELA BALDIVIEZO BURGOS",
+        "telefone": "55 (11) 2476-9259",
+        "endereco": "RUA CUBATAO - 929 - CONJUNTO 83",
+        "endereco_completo": "RUA CUBATAO - 929 - CONJUNTO 83, 04013-043, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04013-043",
+        "email": "katiamariela19@gmail.com",
+        "distancia": 1.24,
+        "LatLng": {
+            "lat": -23.5798215,
+            "lng": -46.641493
+        }
+    },
+    {
+        "id": "1033",
+        "nome": "CLS ODONTOCLINICA LTDA ME",
+        "telefone": "55 (11) 3876-0650",
+        "endereco": "R DR TOMÁS CARVALHAL - 277",
+        "endereco_completo": "R DR TOMÁS CARVALHAL - 277, 04006-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04006-000",
+        "email": "claudioefeiche@gmail.com",
+        "distancia": 1.7,
+        "LatLng": {
+            "lat": -23.5763673,
+            "lng": -46.6439451
+        }
+    },
+    {
+        "id": "1372",
+        "nome": "CLAUDIA TOYAMA",
+        "telefone": "55 (11) 97207-4717",
+        "endereco": "PEDRO DE TOLEDO - 80 - SALA 24",
+        "endereco_completo": "PEDRO DE TOLEDO - 80 - SALA 24, 04039-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04039-000",
+        "email": "clatoyama21@gmail.com",
+        "distancia": 1,
+        "LatLng": {
+            "lat": -23.5982394,
+            "lng": -46.6374426
+        }
+    },
+    {
+        "id": "1183",
+        "nome": "SYF ODONTOLOGIA INTEGRADA LTDA",
+        "telefone": "55 (11) 98659-3466",
+        "endereco": "RUA MACHADO BITENCOURT - 205 - CONJUNTO 42",
+        "endereco_completo": "RUA MACHADO BITENCOURT - 205 - CONJUNTO 42, 04044-000, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "04044-000",
+        "email": "doc.sanyu@gmail.com",
+        "distancia": 1.11,
+        "LatLng": {
+            "lat": -23.5991593,
+            "lng": -46.6381715
+        }
+    },
+    {
+        "id": "905",
+        "nome": "PAULA MARTINS SALDANHA FARIA",
+        "telefone": "55 (11) 4448-2900",
+        "endereco": "RUA DIAS DE TOLEDO - 264",
+        "endereco_completo": "RUA DIAS DE TOLEDO - 264, 04143-030, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04143-030",
+        "email": "paulinhamsf@hotmail.com",
+        "distancia": 2.8,
+        "LatLng": {
+            "lat": -23.6146549,
+            "lng": -46.634654
+        }
+    },
+    {
+        "id": "1042",
+        "nome": "RODRIGO AKIRA SATO",
+        "telefone": "55 (11) 2275-8270",
+        "endereco": "AV.ODILA - 883",
+        "endereco_completo": "AV.ODILA - 883, 04058-021, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04058-021",
+        "email": "akira_implantes@yahoo.com.br",
+        "distancia": 2.8,
+        "LatLng": {
+            "lat": -23.6128993,
+            "lng": -46.6455284
+        }
+    },
+    {
+        "id": "1260",
+        "nome": "SERGIO AUGUSTO BELPIEDE SIMOES",
+        "telefone": "55 (11) 99790-8854",
+        "endereco": "RUA CASTRO ALVES - 457 - AP 81",
+        "endereco_completo": "RUA CASTRO ALVES - 457 - AP 81, 01532-001, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "01532-001",
+        "email": "adm@preventser.com.br",
+        "distancia": 2.26,
+        "LatLng": {
+            "lat": -23.5691742,
+            "lng": -46.6362561
+        }
+    },
+    {
+        "id": "538",
+        "nome": "DANIEL ROBERTO FERNANDES",
+        "telefone": "55 (11) 98149-4247",
+        "endereco": "RUA JOSE VICENTE DE AZEVEDO - 442 - 42",
+        "endereco_completo": "RUA JOSE VICENTE DE AZEVEDO - 442 - 42, 04139-030, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04139-030",
+        "email": "drfe30@gmail.com",
+        "distancia": 1.98,
+        "LatLng": {
+            "lat": -23.606868,
+            "lng": -46.6314689
+        }
+    },
+    {
+        "id": "1485",
+        "nome": "PRESTES MEIRELES ODONTOLOGIA LTDA",
+        "telefone": "55 (11) 98545-8821",
+        "endereco": "R APENINOS - 930 - CONJ 141",
+        "endereco_completo": "R APENINOS - 930 - CONJ 141, 04104-020, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04104-020",
+        "email": "dradaniele@vipeodontologia.com",
+        "distancia": 1.6,
+        "LatLng": {
+            "lat": -23.5756618,
+            "lng": -46.639723
+        }
+    },
+    {
+        "id": "1786",
+        "nome": "ODONTO SAUDE-ASSIST. ODONT S/S LTDA",
+        "telefone": "55 (11) 3287-7759",
+        "endereco": "PCA OSWALDO CRUZ - 124 - CJ 101",
+        "endereco_completo": "PCA OSWALDO CRUZ - 124 - CJ 101, 04004-070, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04004-070",
+        "email": "financeiro@clinicaabla.com.br",
+        "distancia": 2.27,
+        "LatLng": {
+            "lat": -23.5706345,
+            "lng": -46.6441112
+        }
+    },
+    {
+        "id": "1601",
+        "nome": "FLAVIA BECHARA CARRARA",
+        "telefone": null,
+        "endereco": "RUA MANUEL DA NÓBREGA - 595 - 62",
+        "endereco_completo": "RUA MANUEL DA NÓBREGA - 595 - 62, 04001-083, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "04001-083",
+        "email": "flaviabechara@hotmail.com",
+        "distancia": 2.52,
+        "LatLng": {
+            "lat": -23.5724541,
+            "lng": -46.6517768
+        }
+    },
+    {
+        "id": "1348",
+        "nome": "THIAGO GUIMARAES VERONA",
+        "telefone": "55 (11) 3171-0512",
+        "endereco": "RUA VERGUEIRO - 1353 - CONJ 1006",
+        "endereco_completo": "RUA VERGUEIRO - 1353 - CONJ 1006, 04101-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04101-000",
+        "email": "thiago.verona@uol.com.br",
+        "distancia": 1.76,
+        "LatLng": {
+            "lat": -23.5742769,
+            "lng": -46.6401971
+        }
+    },
+    {
+        "id": "158",
+        "nome": "MILENA ALCANTARA MEDEIROS",
+        "telefone": "55 (11) 98926-1399",
+        "endereco": "RUA ESTELA - 515 - CJ 62 BL G",
+        "endereco_completo": "RUA ESTELA - 515 - CJ 62 BL G, 04011-002, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04011-002",
+        "email": "mila_amedeiros@hotmail.com",
+        "distancia": 1.57,
+        "LatLng": {
+            "lat": -23.5788732,
+            "lng": -46.6456289
+        }
+    },
+    {
+        "id": "277",
+        "nome": "SUELY TIEKO NAKANISHI",
+        "telefone": "55 (11) 5581-1541",
+        "endereco": "AVENIDA DOUTOR ALTINO ARANTES - 190",
+        "endereco_completo": "AVENIDA DOUTOR ALTINO ARANTES - 190, 04042-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04042-001",
+        "email": "sunakanishi@gmail.com",
+        "distancia": 1.5,
+        "LatLng": {
+            "lat": -23.6026492,
+            "lng": -46.6387132
+        }
+    },
+    {
+        "id": "1717",
+        "nome": "DENISE REGINA GROBER",
+        "telefone": "55 (11) 99424-6723",
+        "endereco": "ALAMEDA NHAMBIQUARAS - 1770",
+        "endereco_completo": "ALAMEDA NHAMBIQUARAS - 1770, 04090-004, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04090-004",
+        "email": "RECEPCAO@CLAIRODONTOLOGIA.COM.BR",
+        "distancia": 3.97,
+        "LatLng": {
+            "lat": -23.6125008,
+            "lng": -46.6651382
+        }
+    },
+    {
+        "id": "578",
+        "nome": "GUSTAVO ARONSON",
+        "telefone": "55 (11) 3082-3291",
+        "endereco": "R JOSÉ M LISBOA - 1168 - AP 11",
+        "endereco_completo": "R JOSÉ M LISBOA - 1168 - AP 11, 01423-002, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "01423-002",
+        "email": "paulo@aronson.com.br",
+        "distancia": 3.85,
+        "LatLng": {
+            "lat": -23.5644622,
+            "lng": -46.6615106
+        }
+    },
+    {
+        "id": "603",
+        "nome": "SINCRO ODONTO E SAUDE LTDA",
+        "telefone": "55 (11) 3262-4410",
+        "endereco": "AL SANTOS - 455 - SALA 1108 E 1109",
+        "endereco_completo": "AL SANTOS - 455 - SALA 1108 E 1109, 01419-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "01419-000",
+        "email": "sincro.odonto@gmail.com",
+        "distancia": 3.77,
+        "LatLng": {
+            "lat": -23.5557714,
+            "lng": -46.6395571
+        }
+    },
+    {
+        "id": "1917",
+        "nome": "VIVIANNE S RIEG",
+        "telefone": "55 (11) 99685-2334",
+        "endereco": "AVENIDA PAULISTA - 807 - CONJUNTO 1007",
+        "endereco_completo": "AVENIDA PAULISTA - 807 - CONJUNTO 1007, 01311-915, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "01311-915",
+        "email": "vivisato@gmail.com",
+        "distancia": 3,
+        "LatLng": {
+            "lat": -23.5665641,
+            "lng": -46.650928
+        }
+    },
+    {
+        "id": "1266",
+        "nome": "ODONTOARTESP CLINICA ODONTOLOGICA",
+        "telefone": "55 (11) 2914-2774",
+        "endereco": "AV D PEDRO I - 281",
+        "endereco_completo": "AV D PEDRO I - 281, 01552-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "01552-001",
+        "email": "mattei@uol.com.br",
+        "distancia": 3.48,
+        "LatLng": {
+            "lat": -23.5675466,
+            "lng": -46.6109964
+        }
+    },
+    {
+        "id": "643",
+        "nome": "FABIANA FERREIRA VIANA",
+        "telefone": "55 (11) 95707-0457",
+        "endereco": "R DAS FIANDEIRAS - 48",
+        "endereco_completo": "R DAS FIANDEIRAS - 48, 04545-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04545-000",
+        "email": "influenceodontologia@gmail.com",
+        "distancia": 4.04,
+        "LatLng": {
+            "lat": -23.5967526,
+            "lng": -46.6742498
+        }
+    },
+    {
+        "id": "764",
+        "nome": "KARLA TARQUINIO MARINHO",
+        "telefone": "55 (11) 99364-9783",
+        "endereco": "RUA FREI CANECA - 1407",
+        "endereco_completo": "RUA FREI CANECA - 1407, 01307-003, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "01307-003",
+        "email": "bidaodonto@hotmail.com",
+        "distancia": 4.15,
+        "LatLng": {
+            "lat": -23.5586847,
+            "lng": -46.6584121
+        }
+    },
+    {
+        "id": "1641",
+        "nome": "ELISEO PABLO CHUN",
+        "telefone": "55 (11) 95359-6064",
+        "endereco": "ALAMEDA CAMPINAS - 728 - AP 44",
+        "endereco_completo": "ALAMEDA CAMPINAS - 728 - AP 44, 01404-001, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "01404-001",
+        "email": "eliseochundr@gmail.com",
+        "distancia": 3.16,
+        "LatLng": {
+            "lat": -23.5674936,
+            "lng": -46.6550767
+        }
+    },
+    {
+        "id": "1388",
+        "nome": "VICTOR DOS SANTOS FABBRI",
+        "telefone": "55 (11) 97288-1748",
+        "endereco": "ALAMEDA DOS JURUPIS - 452",
+        "endereco_completo": "ALAMEDA DOS JURUPIS - 452, 04088-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04088-001",
+        "email": "victorfabbri@hotmail.com",
+        "distancia": 2.88,
+        "LatLng": {
+            "lat": -23.6033709,
+            "lng": -46.6592021
+        }
+    },
+    {
+        "id": "865",
+        "nome": "ESPACO ODONTOLOGIA E IMPLANTES LTDA.",
+        "telefone": "55 (11) 2273-0142",
+        "endereco": "R LINO COUTINHO - 1509",
+        "endereco_completo": "R LINO COUTINHO - 1509, 04207-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04207-001",
+        "email": "acessoremoto.ipiranga@gmail.com",
+        "distancia": 3.52,
+        "LatLng": {
+            "lat": -23.596749,
+            "lng": -46.6017716
+        }
+    },
+    {
+        "id": "566",
+        "nome": "WHITESMILE SERVICOS",
+        "telefone": "55 (11) 5543-7409",
+        "endereco": "R CD DE PORTO ALEGRE - 1724",
+        "endereco_completo": "R CD DE PORTO ALEGRE - 1724, 04608-003, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "04608-003",
+        "email": "atendimento@whitesmile.com.br",
+        "distancia": 3.77,
+        "LatLng": {
+            "lat": -23.5557714,
+            "lng": -46.6395571
+        }
+    },
+    {
+        "id": "1201",
+        "nome": "MARCELO CARDOZO DE CARVALHO",
+        "telefone": "55 (11) 98382-1977",
+        "endereco": "RUA LORD COCKRANE - 522",
+        "endereco_completo": "RUA LORD COCKRANE - 522, 04213-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04213-001",
+        "email": "marcard@uol.com.br",
+        "distancia": 3.35,
+        "LatLng": {
+            "lat": -23.5928942,
+            "lng": -46.602721
+        }
+    },
+    {
+        "id": "1530",
+        "nome": "MYRELE PAVAN PASIN",
+        "telefone": "55 (11) 99689-6929",
+        "endereco": "RUA RITA JOANA DE SOUZA - 502 - AP 213 TORRE 1",
+        "endereco_completo": "RUA RITA JOANA DE SOUZA - 502 - AP 213 TORRE 1, 04601-061, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04601-061",
+        "email": "myppasin@hotmail.com",
+        "distancia": 3.77,
+        "LatLng": {
+            "lat": -23.5557714,
+            "lng": -46.6395571
+        }
+    },
+    {
+        "id": "1363",
+        "nome": "CAMILA ROSSI SUGINO",
+        "telefone": "55 (11) 5535-2318",
+        "endereco": "ALAMEDA DOS AICÁS - 1028 - APTO 35",
+        "endereco_completo": "ALAMEDA DOS AICÁS - 1028 - APTO 35, 04086-000, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "04086-000",
+        "email": "milarossi@hotmail.com",
+        "distancia": 3.59,
+        "LatLng": {
+            "lat": -23.6117078,
+            "lng": -46.6609806
+        }
+    },
+    {
+        "id": "988",
+        "nome": "CARLOS CARNELOS RODRIGUES",
+        "telefone": "55 (11) 98783-0825",
+        "endereco": "AV S GABRIEL - 149 - CONJ 101",
+        "endereco_completo": "AV S GABRIEL - 149 - CONJ 101, 01435-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "01435-001",
+        "email": "drcarloscarnelos@gmail.com",
+        "distancia": 3.69,
+        "LatLng": {
+            "lat": -23.5820354,
+            "lng": -46.6706952
+        }
+    },
+    {
+        "id": "1454",
+        "nome": "CLINICA SALUS: UROLOGIA, ODONTOLOGIA E",
+        "telefone": "55 (11) 3637-7003",
+        "endereco": "R ITAPEVA - 518 - CONJ 1101 E 1102",
+        "endereco_completo": "R ITAPEVA - 518 - CONJ 1101 E 1102, 01332-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "01332-000",
+        "email": "anadeia.neves@hotmail.com",
+        "distancia": 3.71,
+        "LatLng": {
+            "lat": -23.5605538,
+            "lng": -46.6535807
+        }
+    },
+    {
+        "id": "1331",
+        "nome": "IN SUK YI & CIA LTDA",
+        "telefone": "55 (11) 3399-2158",
+        "endereco": "R BR DE IGUAPE - 168",
+        "endereco_completo": "R BR DE IGUAPE - 168, 01507-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "01507-000",
+        "email": "rt.odontocompanyliberdade@gmail.com",
+        "distancia": 3.45,
+        "LatLng": {
+            "lat": -23.5584206,
+            "lng": -46.635311
+        }
+    },
+    {
+        "id": "790",
+        "nome": "MARCELO KEIJI SUZUKI",
+        "telefone": "55 (11) 98580-9471",
+        "endereco": "RUA PEREIRA ESTEFANO - 114 - CONJUNTO 1406",
+        "endereco_completo": "RUA PEREIRA ESTEFANO - 114 - CONJUNTO 1406, 04144-070, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04144-070",
+        "email": "drmarcelo@clinicacoss.com.br",
+        "distancia": 3.2,
+        "LatLng": {
+            "lat": -23.6181166,
+            "lng": -46.637976
+        }
+    },
+    {
+        "id": "297",
+        "nome": "LUIZ ANTONIO MAZZUCCHELLI COSMO",
+        "telefone": "55 (11) 5549-9877",
+        "endereco": "AVENIDA MOEMA - 265",
+        "endereco_completo": "AVENIDA MOEMA - 265, 04077-020, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04077-020",
+        "email": "luizmazzuki@gmail.com",
+        "distancia": 2.87,
+        "LatLng": {
+            "lat": -23.6046596,
+            "lng": -46.6581728
+        }
+    },
+    {
+        "id": "146",
+        "nome": "E F J L CLINICA",
+        "telefone": "55 (11) 3142-9295",
+        "endereco": "AVENIDA PAULISTA - 2001",
+        "endereco_completo": "AVENIDA PAULISTA - 2001, 01311-300, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "01311-300",
+        "email": "OESPPRIMEODONTOLOGIA@GMAIL.COM",
+        "distancia": 4.15,
+        "LatLng": {
+            "lat": -23.559261,
+            "lng": -46.6592817
+        }
+    },
+    {
+        "id": "311",
+        "nome": "ODONTOLOGIA PAZZINE LTDA",
+        "telefone": "55 (11) 3168-9115",
+        "endereco": "R TABAPUA - 827 - CONJ 58",
+        "endereco_completo": "R TABAPUA - 827 - CONJ 58, 04533-013, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04533-013",
+        "email": "odontologiapazzine@gmail.com",
+        "distancia": 4.44,
+        "LatLng": {
+            "lat": -23.5840777,
+            "lng": -46.6785935
+        }
+    },
+    {
+        "id": "1204",
+        "nome": "SPANX - CLINICA DE REABILITACAO BUCAL",
+        "telefone": "55 (11) 2076-8448",
+        "endereco": "R JUMANA - 91",
+        "endereco_completo": "R JUMANA - 91, 03121-030, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "03121-030",
+        "email": "san_gross@hotmail.com",
+        "distancia": 4.55,
+        "LatLng": {
+            "lat": -23.5660269,
+            "lng": -46.5988326
+        }
+    },
+    {
+        "id": "214",
+        "nome": "LUDMAR EDSON PEIXOTO JUNIOR",
+        "telefone": "55 (11) 99735-3106",
+        "endereco": "ALAMEDA DOS MARACATINS - 1435",
+        "endereco_completo": "ALAMEDA DOS MARACATINS - 1435, 04089-015, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04089-015",
+        "email": "LUDMARJR@HOTMAIL.COM",
+        "distancia": 3.97,
+        "LatLng": {
+            "lat": -23.6122894,
+            "lng": -46.6654124
+        }
+    },
+    {
+        "id": "1144",
+        "nome": "ERIKA SABRINA TAMINATO",
+        "telefone": "55 (11) 3714-0746",
+        "endereco": "RUA BARAO DE DUPRAT - 215 - SOBRELOJA",
+        "endereco_completo": "RUA BARAO DE DUPRAT - 215 - SOBRELOJA, 04743-060, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04743-060",
+        "email": "erika_taminato@hotmail.com",
+        "distancia": 5.25,
+        "LatLng": {
+            "lat": -23.5424427,
+            "lng": -46.6310242
+        }
+    },
+    {
+        "id": "1103",
+        "nome": "ESTELA MUNIZ ANTELO",
+        "telefone": "55 (11) 3713-4098",
+        "endereco": "RUA TABAPUA - 649 - CJ 27",
+        "endereco_completo": "RUA TABAPUA - 649 - CJ 27, 04533-012, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04533-012",
+        "email": "estelama@gmail.com",
+        "distancia": 4.26,
+        "LatLng": {
+            "lat": -23.5837841,
+            "lng": -46.6767584
+        }
+    },
+    {
+        "id": "1516",
+        "nome": "EDUARDO ALTIERI BERETTA",
+        "telefone": "55 (11) 99210-9535",
+        "endereco": "RUA HELENA - 218",
+        "endereco_completo": "RUA HELENA - 218, 04552-050, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04552-050",
+        "email": "eduberetta@uol.com.br",
+        "distancia": 5.2,
+        "LatLng": {
+            "lat": -23.5929564,
+            "lng": -46.6862484
+        }
+    },
+    {
+        "id": "1015",
+        "nome": "DANIELLI ZAMORA CRUZ DATTILIO",
+        "telefone": "55 (11) 2337-9833",
+        "endereco": "RUA CORONEL JOVINIANO BRANDAO - 528 - SALA1",
+        "endereco_completo": "RUA CORONEL JOVINIANO BRANDAO - 528 - SALA1, 03127-175, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03127-175",
+        "email": "dra.danielli.zamora@hotmail.com",
+        "distancia": 5.18,
+        "LatLng": {
+            "lat": -23.57652,
+            "lng": -46.586561
+        }
+    },
+    {
+        "id": "1595",
+        "nome": "SP POLO DE ENSINO EM ODONTOLOGIA LTDA",
+        "telefone": "55 (11) 96593-1968",
+        "endereco": "R ALVORADA - 1347 - ANEXO 1349",
+        "endereco_completo": "R ALVORADA - 1347 - ANEXO 1349, 04550-004, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "04550-004",
+        "email": "diretoria@ioasaopaulo.com.br",
+        "distancia": 4.91,
+        "LatLng": {
+            "lat": -23.5963037,
+            "lng": -46.683023
+        }
+    },
+    {
+        "id": "872",
+        "nome": "ANA MARIA CONSTANTINO",
+        "telefone": "55 (11) 99818-0101",
+        "endereco": "RUA GOMES DE CARVALHO - 662 - AP 101",
+        "endereco_completo": "RUA GOMES DE CARVALHO - 662 - AP 101, 04547-002, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04547-002",
+        "email": "ortodontiangola@gmail.com",
+        "distancia": 4.68,
+        "LatLng": {
+            "lat": -23.5993698,
+            "lng": -46.6799844
+        }
+    },
+    {
+        "id": "866",
+        "nome": "NELSON ALVES DALLOCA",
+        "telefone": "55 (11) 5542-5309",
+        "endereco": "RUA CONDE DE PORTO ALEGRE - 1724",
+        "endereco_completo": "RUA CONDE DE PORTO ALEGRE - 1724, 04608-003, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04608-003",
+        "email": "dr.nelson@whitesmile.com.br",
+        "distancia": 4.82,
+        "LatLng": {
+            "lat": -23.6187978,
+            "lng": -46.6702017
+        }
+    },
+    {
+        "id": "177",
+        "nome": "EVERTON FLAIBAN",
+        "telefone": "55 (11) 97036-8808",
+        "endereco": "AV NOVE DE JULHO - 5483",
+        "endereco_completo": "AV NOVE DE JULHO - 5483, 01407-200, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "01407-200",
+        "email": "evertonflaiban@hotmail.com",
+        "distancia": 4.4,
+        "LatLng": {
+            "lat": -23.5800921,
+            "lng": -46.6773795
+        }
+    },
+    {
+        "id": "67",
+        "nome": "ADRIANA HECHT",
+        "telefone": "55 (11) 5041-9386",
+        "endereco": "RUA JOAQUIM FLORIAN - 820 - CJ 142",
+        "endereco_completo": "RUA JOAQUIM FLORIAN - 820 - CJ 142, 04534-003, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "04534-003",
+        "email": "drihecht@gmail.com",
+        "distancia": 4.37,
+        "LatLng": {
+            "lat": -23.5854196,
+            "lng": -46.6780027
+        }
+    },
+    {
+        "id": "478",
+        "nome": "DANIELA GOMES DOS SANTOS DE ALMEIDA",
+        "telefone": "55 (11) 98687-8418",
+        "endereco": "ALAMEDA DOS NHAMBIQUARAS - 1770",
+        "endereco_completo": "ALAMEDA DOS NHAMBIQUARAS - 1770, 04090-004, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04090-004",
+        "email": "recepcao@clairodontologia.com.br",
+        "distancia": 3.97,
+        "LatLng": {
+            "lat": -23.6125008,
+            "lng": -46.6651382
+        }
+    },
+    {
+        "id": "141",
+        "nome": "JULIANA CASTILHO CHAVES ROJZ",
+        "telefone": "55 (11) 98588-4480",
+        "endereco": "AVENIDA COTOVIA - 737 - AP406",
+        "endereco_completo": "AVENIDA COTOVIA - 737 - AP406, 04517-002, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04517-002",
+        "email": "ju_chaves@hotmail.com",
+        "distancia": 4.04,
+        "LatLng": {
+            "lat": -23.6081148,
+            "lng": -46.6694262
+        }
+    },
+    {
+        "id": "280",
+        "nome": "AMANDA CAETANO TANAKA",
+        "telefone": "55 (11) 94221-8258",
+        "endereco": "RUA TEODORO SAMPAIO - 352 - CJ. 32",
+        "endereco_completo": "RUA TEODORO SAMPAIO - 352 - CJ. 32, 05406-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "05406-000",
+        "email": "amanda.tanaka@alumni.usp.br",
+        "distancia": 5.48,
+        "LatLng": {
+            "lat": -23.5555554,
+            "lng": -46.6744413
+        }
+    },
+    {
+        "id": "1456",
+        "nome": "CLINICA ODONTOLOGICA NOVA ERA DE",
+        "telefone": "55 (11) 3815-8038",
+        "endereco": "AVENIDA PEDROSO DE MORAIS - 631 - CONJUNTO 17",
+        "endereco_completo": "AVENIDA PEDROSO DE MORAIS - 631 - CONJUNTO 17, 05419-905, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "05419-905",
+        "email": "ledabalistrieri@gmail.com",
+        "distancia": 6.31,
+        "LatLng": {
+            "lat": -23.5646972,
+            "lng": -46.6911066
+        }
+    },
+    {
+        "id": "534",
+        "nome": "MARCIO YUKIO AHAGON",
+        "telefone": "55 (11) 96308-9635",
+        "endereco": "RUA PEDRO DE GODÓI - 269 - 144 C",
+        "endereco_completo": "RUA PEDRO DE GODÓI - 269 - 144 C, 03138-010, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "03138-010",
+        "email": "marcioahagon@gmail.com",
+        "distancia": 5.46,
+        "LatLng": {
+            "lat": -23.5875064,
+            "lng": -46.5818374
+        }
+    },
+    {
+        "id": "508",
+        "nome": "KARINA KOPKY",
+        "telefone": "55 (11) 99393-4932",
+        "endereco": "AV BRIGADEIRO FARIA LIMA - 1811",
+        "endereco_completo": "AV BRIGADEIRO FARIA LIMA - 1811, 01452-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "01452-001",
+        "email": "kakakop@ig.com.br",
+        "distancia": 5.77,
+        "LatLng": {
+            "lat": -23.5730618,
+            "lng": -46.6890928
+        }
+    },
+    {
+        "id": "313",
+        "nome": "ALINE DANIELI DIAS DE MORAES",
+        "telefone": "55 (11) 97707-4427",
+        "endereco": "RUA FUNCHAL - 551 - CONJ 81",
+        "endereco_completo": "RUA FUNCHAL - 551 - CONJ 81, 04551-060, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04551-060",
+        "email": "auxiliar@aclinicaoral.com.br",
+        "distancia": 5.63,
+        "LatLng": {
+            "lat": -23.5955634,
+            "lng": -46.6902352
+        }
+    },
+    {
+        "id": "1158",
+        "nome": "TALITA Y M TACHIBANA",
+        "telefone": "55 (11) 98193-2682",
+        "endereco": "AV DR CARDOSO DE MELO - 1666 - CJ 102",
+        "endereco_completo": "AV DR CARDOSO DE MELO - 1666 - CJ 102, 04548-005, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04548-005",
+        "email": "MTACHI.ODONTOLOGIA@GMAIL.COM",
+        "distancia": 5.53,
+        "LatLng": {
+            "lat": -23.5961682,
+            "lng": -46.6891495
+        }
+    },
+    {
+        "id": "614",
+        "nome": "LUCIANA BIANCHI",
+        "telefone": "55 (19) 98125-4147",
+        "endereco": "RUA JOAO TEODORO - 358 - APTO 321 EDIFICIO PIEMONTE",
+        "endereco_completo": "RUA JOAO TEODORO - 358 - APTO 321 EDIFICIO PIEMONTE, 13035-180, CAMPINAS - SP",
+        "cidade_estado": "CAMPINAS - SP",
+        "cep": "13035-180",
+        "email": "lubianchi6@hotmail.com",
+        "distancia": 6.27,
+        "LatLng": {
+            "lat": -23.5334093,
+            "lng": -46.6290358
+        }
+    },
+    {
+        "id": "461",
+        "nome": "LEONARDO THOCIO FUKUDA SEGAUA",
+        "telefone": "55 (11) 99317-6673",
+        "endereco": "ALAMEDA TERRACOTA - 185 - BLOCO A",
+        "endereco_completo": "ALAMEDA TERRACOTA - 185 - BLOCO A, 09531-190, SAO CAETANO DO SUL - SP",
+        "cidade_estado": "SAO CAETANO DO SUL - SP",
+        "cep": "09531-190",
+        "email": "leonardosegaua@me.com",
+        "distancia": 6.77,
+        "LatLng": {
+            "lat": -23.6240638,
+            "lng": -46.5807688
+        }
+    },
+    {
+        "id": "1232",
+        "nome": "DEBORAH LEE PEREIRA",
+        "telefone": "55 (11) 95905-5442",
+        "endereco": "RUA ANDRE AMPERE - 153 - SALA 21",
+        "endereco_completo": "RUA ANDRE AMPERE - 153 - SALA 21, 04562-907, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04562-907",
+        "email": "deborahlee.orto@gmail.com",
+        "distancia": 6.38,
+        "LatLng": {
+            "lat": -23.6100743,
+            "lng": -46.693825
+        }
+    },
+    {
+        "id": "1405",
+        "nome": "GABRIELA ARAUJO DAME LUZ",
+        "telefone": "55 (11) 96514-8440",
+        "endereco": "RUA TEODORO SAMPAIO - 1722",
+        "endereco_completo": "RUA TEODORO SAMPAIO - 1722, 05406-100, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "05406-100",
+        "email": "dra.gabrielaaraujo@hotmail.com",
+        "distancia": 5.94,
+        "LatLng": {
+            "lat": -23.5622804,
+            "lng": -46.6856233
+        }
+    },
+    {
+        "id": "1258",
+        "nome": "TAILA SASSO BARAKAT",
+        "telefone": "55 (11) 2021-1901",
+        "endereco": "AV SAPOPEMBA - 735 - SL 03",
+        "endereco_completo": "AV SAPOPEMBA - 735 - SL 03, 03345-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03345-001",
+        "email": "tailabarakat@hotmail.com",
+        "distancia": 7.03,
+        "LatLng": {
+            "lat": -23.5626076,
+            "lng": -46.5729549
+        }
+    },
+    {
+        "id": "1392",
+        "nome": "CENTRO ODONTOLOGICO EUROPA S/S LTDA",
+        "telefone": "55 (11) 5506-3027",
+        "endereco": "R ANDRÉ AMPÉRE - 153 - CJ 85",
+        "endereco_completo": "R ANDRÉ AMPÉRE - 153 - CJ 85, 04562-080, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04562-080",
+        "email": "adm@centroodontologicoeuropa.com.br",
+        "distancia": 6.38,
+        "LatLng": {
+            "lat": -23.6100714,
+            "lng": -46.6937905
+        }
+    },
+    {
+        "id": "318",
+        "nome": "SJC SERVIÇOS ODONTOLOGICOS LTDA",
+        "telefone": "55 (11) 4328-9950",
+        "endereco": "R S JOÃO CLÍMACO - 689 - SOBRELOJA",
+        "endereco_completo": "R S JOÃO CLÍMACO - 689 - SOBRELOJA, 04255-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04255-000",
+        "email": "sp-saojoaoclimaco@odontocompany.com",
+        "distancia": 5.86,
+        "LatLng": {
+            "lat": -23.6234001,
+            "lng": -46.5913834
+        }
+    },
+    {
+        "id": "269",
+        "nome": "DANIELE DA SILVA MOREIRA",
+        "telefone": "55 (11) 94610-7094",
+        "endereco": "AVENIDA ROQUE PETRONI JUNIOR - 1089 - CONJ 516",
+        "endereco_completo": "AVENIDA ROQUE PETRONI JUNIOR - 1089 - CONJ 516, 04707-900, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04707-900",
+        "email": "danysm277@gmail.com",
+        "distancia": 7.49,
+        "LatLng": {
+            "lat": -23.623467,
+            "lng": -46.698814
+        }
+    },
+    {
+        "id": "1911",
+        "nome": "FABIO PEREIRA DE SOUSA",
+        "telefone": "55 (11) 98812-9621",
+        "endereco": "R PERRELLA - 331 - APTO1106",
+        "endereco_completo": "R PERRELLA - 331 - APTO1106, 09520-660, SAO CAETANO DO SUL - SP",
+        "cidade_estado": "SAO CAETANO DO SUL - SP",
+        "cep": "09520-660",
+        "email": "vegimenez@gmail.com",
+        "distancia": 6.84,
+        "LatLng": {
+            "lat": -23.6084372,
+            "lng": -46.5715313
+        }
+    },
+    {
+        "id": "1161",
+        "nome": "CM OGAWA STUDIO",
+        "telefone": "55 (11) 99808-3869",
+        "endereco": "RUA ARANDU - 205 - CJ 809",
+        "endereco_completo": "RUA ARANDU - 205 - CJ 809, 04562-030, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "04562-030",
+        "email": "celsomassahiro@hotmail.com",
+        "distancia": 6.31,
+        "LatLng": {
+            "lat": -23.6097016,
+            "lng": -46.6932771
+        }
+    },
+    {
+        "id": "1092",
+        "nome": "SMILINK PF DANIELE DA SILVA MOREIRA",
+        "telefone": "55 (11) 94610-7094",
+        "endereco": "AVENIDA ROQUE PETRONI JUNIOR - 1089",
+        "endereco_completo": "AVENIDA ROQUE PETRONI JUNIOR - 1089, 04707-900, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04707-900",
+        "email": "danysm277@gmail.com",
+        "distancia": 6.76,
+        "LatLng": {
+            "lat": -23.6262312,
+            "lng": -46.6881882
+        }
+    },
+    {
+        "id": "349",
+        "nome": "LIVIA LAMUNIER DE ABREU CAMARGO",
+        "telefone": "55 (11) 99250-6881",
+        "endereco": "AV BRG FARIA LIMA - 1478 - CJ 2205",
+        "endereco_completo": "AV BRG FARIA LIMA - 1478 - CJ 2205, 01451-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "01451-001",
+        "email": "clinicaadc@gmail.com",
+        "distancia": 6.09,
+        "LatLng": {
+            "lat": -23.570787,
+            "lng": -46.6915844
+        }
+    },
+    {
+        "id": "721",
+        "nome": "FERNANDA ANTONIA MADRUGA NOBREGA",
+        "telefone": "55 (11) 99844-5453",
+        "endereco": "RUA ALCIDES RICARDINI NEVES - 12",
+        "endereco_completo": "RUA ALCIDES RICARDINI NEVES - 12, 04575-050, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04575-050",
+        "email": "fernanda.nobbrega@gmail.com",
+        "distancia": 6.23,
+        "LatLng": {
+            "lat": -23.6082531,
+            "lng": -46.692953
+        }
+    },
+    {
+        "id": "983",
+        "nome": "ORAL GOLD BERRINI LTDA",
+        "telefone": "55 (11) 2925-5815",
+        "endereco": "AV NOVA INDEPENDENCIA - 291 - SALA NR 291 SALA 2",
+        "endereco_completo": "AV NOVA INDEPENDENCIA - 291 - SALA NR 291 SALA 2, 04570-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04570-000",
+        "email": "oralgoldberrini@gmail.com",
+        "distancia": 6.03,
+        "LatLng": {
+            "lat": -23.6055298,
+            "lng": -46.6918722
+        }
+    },
+    {
+        "id": "734",
+        "nome": "NERO NUCLEO DE ESTETICA E",
+        "telefone": "55 (11) 2386-2336",
+        "endereco": "R CLÁUDIO SOARES - 72 - CJ 509",
+        "endereco_completo": "R CLÁUDIO SOARES - 72 - CJ 509, 05422-030, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "05422-030",
+        "email": "marceloamms@yahoo.com.br",
+        "distancia": 6.42,
+        "LatLng": {
+            "lat": -23.5682249,
+            "lng": -46.69399
+        }
+    },
+    {
+        "id": "411",
+        "nome": "MARCO AURELIO DOMENICIS MARQUES",
+        "telefone": "55 (11) 97182-0567",
+        "endereco": "RUA DOS BURITIS - 54 - LOJA 32",
+        "endereco_completo": "RUA DOS BURITIS - 54 - LOJA 32, 04321-900, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04321-900",
+        "email": "madomarques68@gmail.com",
+        "distancia": 6.23,
+        "LatLng": {
+            "lat": -23.6450821,
+            "lng": -46.6430006
+        }
+    },
+    {
+        "id": "1971",
+        "nome": "CLAUDIO EJZENBAUM",
+        "telefone": null,
+        "endereco": "RUA DOUTOR BRASÍLIO MACHADO - 389",
+        "endereco_completo": "RUA DOUTOR BRASÍLIO MACHADO - 389, 01230-010, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "01230-010",
+        "email": "Claudioejzenbaum@gmail.com",
+        "distancia": 6.11,
+        "LatLng": {
+            "lat": -23.5390783,
+            "lng": -46.6593221
+        }
+    },
+    {
+        "id": "1620",
+        "nome": "CALCIODONTO SAUDE E ESTETICA BUCAL",
+        "telefone": "55 (11) 99988-7672",
+        "endereco": "R FILIPE CAMARAO - 141",
+        "endereco_completo": "R FILIPE CAMARAO - 141, 03065-000, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "03065-000",
+        "email": "calciodonto@gmail.com",
+        "distancia": 8.24,
+        "LatLng": {
+            "lat": -23.5362527,
+            "lng": -46.5790736
+        }
+    },
+    {
+        "id": "232",
+        "nome": "PAULO ROBERTO ARDITO BARTOLOMEI",
+        "telefone": "55 (11) 98315-9292",
+        "endereco": "RUA ITAPURA - 239 - SALA 1005",
+        "endereco_completo": "RUA ITAPURA - 239 - SALA 1005, 03310-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03310-000",
+        "email": "contato@clucibartolomeiodontologia.com.br",
+        "distancia": 8.83,
+        "LatLng": {
+            "lat": -23.5406014,
+            "lng": -46.5670933
+        }
+    },
+    {
+        "id": "119",
+        "nome": "VITA PRIME ODONTOLOGIA EIRELI ME",
+        "telefone": "55 (11) 97332-1088",
+        "endereco": "RUA EMILIO MALLET - 840",
+        "endereco_completo": "RUA EMILIO MALLET - 840, 03320-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03320-000",
+        "email": "departamentopessoalvitaprime@gmail.com",
+        "distancia": 8.55,
+        "LatLng": {
+            "lat": -23.546718,
+            "lng": -46.5655998
+        }
+    },
+    {
+        "id": "1556",
+        "nome": "KARINE F C VICENTINI",
+        "telefone": "55 (11) 98214-8580",
+        "endereco": "RUA ALEXANDRE DUMAS - 1268",
+        "endereco_completo": "RUA ALEXANDRE DUMAS - 1268, 04717-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04717-000",
+        "email": "karinefcarneiro@gmail.com",
+        "distancia": 8.41,
+        "LatLng": {
+            "lat": -23.6324357,
+            "lng": -46.7033083
+        }
+    },
+    {
+        "id": "121",
+        "nome": "DK FACE ODONTOLOGIA E ESTETICA FACIAL",
+        "telefone": "55 (11) 94610-7094",
+        "endereco": "AV ROQUE PETRONI JUNIOR - 1089 - CONJ 516",
+        "endereco_completo": "AV ROQUE PETRONI JUNIOR - 1089 - CONJ 516, 04707-900, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04707-900",
+        "email": "danysm277@gmail.com",
+        "distancia": 7.49,
+        "LatLng": {
+            "lat": -23.623467,
+            "lng": -46.698814
+        }
+    },
+    {
+        "id": "421",
+        "nome": "GUILHERME E BARRELLA",
+        "telefone": "55 (11) 3813-7738",
+        "endereco": "RUA PURPURINA - 131 - CJ36",
+        "endereco_completo": "RUA PURPURINA - 131 - CJ36, 05435-030, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "05435-030",
+        "email": "dr.barrella@hotmail.com",
+        "distancia": 6.84,
+        "LatLng": {
+            "lat": -23.5532853,
+            "lng": -46.6896869
+        }
+    },
+    {
+        "id": "1638",
+        "nome": "MAURO ELIAS MIGUEL ROSA",
+        "telefone": "55 (11) 2293-3080",
+        "endereco": "RUA VILELA - 652",
+        "endereco_completo": "RUA VILELA - 652, 03314-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03314-000",
+        "email": "maurorosa1970@gmail.com",
+        "distancia": 8.92,
+        "LatLng": {
+            "lat": -23.5401153,
+            "lng": -46.5663519
+        }
+    },
+    {
+        "id": "539",
+        "nome": "ARTE DENTAL ODONTOLOGIA LTDA",
+        "telefone": "55 (11) 2671-8881",
+        "endereco": "R LUIZ DOS SANTOS CABRAL - 470",
+        "endereco_completo": "R LUIZ DOS SANTOS CABRAL - 470, 03337-060, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03337-060",
+        "email": "a-dental@hotmail.com",
+        "distancia": 8.41,
+        "LatLng": {
+            "lat": -23.5565803,
+            "lng": -46.5610894
+        }
+    },
+    {
+        "id": "804",
+        "nome": "ROSANE CORREIA NUNES",
+        "telefone": "55 (11) 3586-4938",
+        "endereco": "AVENIDA VEREADOR ABEL FERREIRA - 1844 - SALA 706",
+        "endereco_completo": "AVENIDA VEREADOR ABEL FERREIRA - 1844 - SALA 706, 03372-015, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03372-015",
+        "email": "rosanercn@hotmail.com",
+        "distancia": 7.97,
+        "LatLng": {
+            "lat": -23.5639437,
+            "lng": -46.5622567
+        }
+    },
+    {
+        "id": "615",
+        "nome": "CHRISTIANE DE PAULA FERREIRA",
+        "telefone": "55 (11) 2225-3277",
+        "endereco": "R RESTINGA - 113 - SALA 802",
+        "endereco_completo": "R RESTINGA - 113 - SALA 802, 03065-020, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03065-020",
+        "email": "chrischristiane1@yahoo.com.br",
+        "distancia": 7.88,
+        "LatLng": {
+            "lat": -23.5399767,
+            "lng": -46.5800525
+        }
+    },
+    {
+        "id": "617",
+        "nome": "COEP & PRATIC ASSISTENCIA ODONTOLOGICA",
+        "telefone": "55 (11) 2338-5938",
+        "endereco": "R CARAIBAS - 823 - SALA 1",
+        "endereco_completo": "R CARAIBAS - 823 - SALA 1, 05020-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "05020-000",
+        "email": "renatomandetta@hotmail.com",
+        "distancia": 7.83,
+        "LatLng": {
+            "lat": -23.5347615,
+            "lng": -46.6838424
+        }
+    },
+    {
+        "id": "1308",
+        "nome": "MD SERVICOS MEDICOS E ODONTOLOGICOS",
+        "telefone": "55 (11) 4221-5130",
+        "endereco": "R NOSSA SENHORA DE FATIMA - 47",
+        "endereco_completo": "R NOSSA SENHORA DE FATIMA - 47, 09540-100, SÃO CAETANO DO SUL - SP",
+        "cidade_estado": "SÃO CAETANO DO SUL - SP",
+        "cep": "09540-100",
+        "email": "Mdodontologia10@gmail.com",
+        "distancia": 7.5,
+        "LatLng": {
+            "lat": -23.6164434,
+            "lng": -46.567958
+        }
+    },
+    {
+        "id": "342",
+        "nome": "ROBERVAL DE MELO SANTOS JUNIOR",
+        "telefone": "55 (11) 99904-5743",
+        "endereco": "RUA PAULO ANDRIGHETTI - 410",
+        "endereco_completo": "RUA PAULO ANDRIGHETTI - 410, 03022-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03022-000",
+        "email": "robervalmsjunior@terra.com.br",
+        "distancia": 7.59,
+        "LatLng": {
+            "lat": -23.5267933,
+            "lng": -46.6057893
+        }
+    },
+    {
+        "id": "677",
+        "nome": "YASUSHI INOUE MIYAHIRA",
+        "telefone": "55 (11) 3804-1072",
+        "endereco": "R NESTOR DE BARROS - 116 - SL 103",
+        "endereco_completo": "R NESTOR DE BARROS - 116 - SL 103, 03325-050, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03325-050",
+        "email": "dr.yasushi103@gmail.com",
+        "distancia": 8.73,
+        "LatLng": {
+            "lat": -23.55298,
+            "lng": -46.5595478
+        }
+    },
+    {
+        "id": "1178",
+        "nome": "LILIAN MONTEIRO PILEGI - ODONTOLOGIA",
+        "telefone": "55 (11) 2098-1001",
+        "endereco": "R AZEVEDO SOARES - 1032 - CONJ 41",
+        "endereco_completo": "R AZEVEDO SOARES - 1032 - CONJ 41, 03322-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03322-001",
+        "email": "administrativo@liahodonto.com.br",
+        "distancia": 8.31,
+        "LatLng": {
+            "lat": -23.5491255,
+            "lng": -46.5667852
+        }
+    },
+    {
+        "id": "742",
+        "nome": "ROGER NASCIMENTO GONCALVES",
+        "telefone": "55 (11) 96628-5908",
+        "endereco": "R. SERRA DE JUREA - 770",
+        "endereco_completo": "R. SERRA DE JUREA - 770, 03323-020, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03323-020",
+        "email": "rogerng8@me.com",
+        "distancia": 7.87,
+        "LatLng": {
+            "lat": -23.550866,
+            "lng": -46.5706336
+        }
+    },
+    {
+        "id": "380",
+        "nome": "JOSE ROBERTO OLIVEIRA FLORIACH",
+        "telefone": "55 (11) 99181-4970",
+        "endereco": "RUA CANTAGALO - 692",
+        "endereco_completo": "RUA CANTAGALO - 692, 03319-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03319-000",
+        "email": "roberto.orto@hotmail.com",
+        "distancia": 8.46,
+        "LatLng": {
+            "lat": -23.5460739,
+            "lng": -46.5672067
+        }
+    },
+    {
+        "id": "753",
+        "nome": "BARBARA MICHAELA REIS DA SILVA",
+        "telefone": "55 (11) 94484-7641",
+        "endereco": "ENXOVIA - 472 - SALA 1408",
+        "endereco_completo": "ENXOVIA - 472 - SALA 1408, 04711-030, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "04711-030",
+        "email": "bmrsmarcelino@gmail.com",
+        "distancia": 7.87,
+        "LatLng": {
+            "lat": -23.6272985,
+            "lng": -46.7006848
+        }
+    },
+    {
+        "id": "854",
+        "nome": "JULIANA MENOSSI",
+        "telefone": "55 (11) 98311-5550",
+        "endereco": "AVENIDA POMPEIA - 634 - SALA 412",
+        "endereco_completo": "AVENIDA POMPEIA - 634 - SALA 412, 05022-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "05022-000",
+        "email": "JUMENOSSI@GMAIL.COM",
+        "distancia": 8.33,
+        "LatLng": {
+            "lat": -23.5301751,
+            "lng": -46.6853807
+        }
+    },
+    {
+        "id": "286",
+        "nome": "AS ODONTOLOGIA ESPECIALIZADA LTDA",
+        "telefone": "55 (11) 2950-9819",
+        "endereco": "R DUARTE DE AZEVEDO - 284 - CONJ 121",
+        "endereco_completo": "R DUARTE DE AZEVEDO - 284 - CONJ 121, 02036-021, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "02036-021",
+        "email": "oespprimesantana@gmail.com",
+        "distancia": 9.89,
+        "LatLng": {
+            "lat": -23.5012031,
+            "lng": -46.6229786
+        }
+    },
+    {
+        "id": "1683",
+        "nome": "LUIZ HENRIQUE SPERA",
+        "telefone": "55 (11) 2979-3611",
+        "endereco": "RUA DOUTOR CESAR - 267 - CONJ 02",
+        "endereco_completo": "RUA DOUTOR CESAR - 267 - CONJ 02, 02013-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "02013-001",
+        "email": "financeiro@drspera.com.br",
+        "distancia": 9.7,
+        "LatLng": {
+            "lat": -23.5024632,
+            "lng": -46.6290001
+        }
+    },
+    {
+        "id": "936",
+        "nome": "KATIA REGINA IZOLA",
+        "telefone": "55 (11) 2959-9798",
+        "endereco": "RUA DOUTOR CESAR - 530 - 104",
+        "endereco_completo": "RUA DOUTOR CESAR - 530 - 104, 02013-002, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "02013-002",
+        "email": "krisimone.simone@gmail.com",
+        "distancia": 9.68,
+        "LatLng": {
+            "lat": -23.5024588,
+            "lng": -46.6314463
+        }
+    },
+    {
+        "id": "475",
+        "nome": "SORRIR SEMPRE CLINICA DE ODONTOLOGIA",
+        "telefone": "55 (11) 99745-1025",
+        "endereco": "R SIRIA - 257",
+        "endereco_completo": "R SIRIA - 257, 03086-040, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "03086-040",
+        "email": "contato@clinicaarches.com.br",
+        "distancia": 9.54,
+        "LatLng": {
+            "lat": -23.5314065,
+            "lng": -46.5664416
+        }
+    },
+    {
+        "id": "1329",
+        "nome": "MARCELO MICHELE NOVELLINO",
+        "telefone": "55 (11) 3772-5480",
+        "endereco": "AV GAL FRANCISCO MORAZAM - 172",
+        "endereco_completo": "AV GAL FRANCISCO MORAZAM - 172, 05626-010, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "05626-010",
+        "email": "mmnovellino@gmail.com",
+        "distancia": 9.82,
+        "LatLng": {
+            "lat": -23.5936365,
+            "lng": -46.7316146
+        }
+    },
+    {
+        "id": "958",
+        "nome": "MOACYR TREVISAN",
+        "telefone": "55 (11) 3337-7722",
+        "endereco": "RUA ANTONIO DE BARROS - 2775",
+        "endereco_completo": "RUA ANTONIO DE BARROS - 2775, 03401-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03401-001",
+        "email": "trevisanmoacyr@yahoo.com.br",
+        "distancia": 9.18,
+        "LatLng": {
+            "lat": -23.5544803,
+            "lng": -46.5537502
+        }
+    },
+    {
+        "id": "359",
+        "nome": "JAILENE SERES DE OLIVEIRA",
+        "telefone": "55 (11) 2966-4219",
+        "endereco": "RUA ENGENHEIRO FRANCISCO BICALHO - 227",
+        "endereco_completo": "RUA ENGENHEIRO FRANCISCO BICALHO - 227, 03239-120, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03239-120",
+        "email": "jaileneseres@gmail.com",
+        "distancia": 9.09,
+        "LatLng": {
+            "lat": -23.5944702,
+            "lng": -46.5463745
+        }
+    },
+    {
+        "id": "345",
+        "nome": "HELUS CLINICA ODONTOLOGICA LTDA",
+        "telefone": "55 (11) 97104-2464",
+        "endereco": "R DR CÉSAR - 530 - CJ 1504 15 ANDAR",
+        "endereco_completo": "R DR CÉSAR - 530 - CJ 1504 15 ANDAR, 02013-002, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "02013-002",
+        "email": "helus.odontologia@gmail.com",
+        "distancia": 9.68,
+        "LatLng": {
+            "lat": -23.5024588,
+            "lng": -46.6314463
+        }
+    },
+    {
+        "id": "1327",
+        "nome": "MARCELO AUGUSTO JOTTO MALAQUIAS",
+        "telefone": "55 (11) 99569-0904",
+        "endereco": "RUA DOUTOR ÂNGELO VITA - 68",
+        "endereco_completo": "RUA DOUTOR ÂNGELO VITA - 68, 03069-000, SÃO PAULO - SP",
+        "cidade_estado": "SÃO PAULO - SP",
+        "cep": "03069-000",
+        "email": "marcelomalaquias@hotmail.com",
+        "distancia": 9.3,
+        "LatLng": {
+            "lat": -23.5345885,
+            "lng": -46.5665466
+        }
+    },
+    {
+        "id": "244",
+        "nome": "CLAUDIO SHIROMOTO",
+        "telefone": "55 (11) 97681-8900",
+        "endereco": "RUA MARIA CURUPAITI - 441",
+        "endereco_completo": "RUA MARIA CURUPAITI - 441, 02452-001, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "02452-001",
+        "email": "dr.claudioshiromoto@gmail.com",
+        "distancia": 9.56,
+        "LatLng": {
+            "lat": -23.5036984,
+            "lng": -46.6424387
+        }
+    },
+    {
+        "id": "1200",
+        "nome": "CLINICA ESSENCIAL EQUIPE SAUDE",
+        "telefone": "55 (11) 2941-3173",
+        "endereco": "R SP ESTEVÃO PERNET - 1059 - CJ 91/93",
+        "endereco_completo": "R SP ESTEVÃO PERNET - 1059 - CJ 91/93, 03315-000, SAO PAULO - SP",
+        "cidade_estado": "SAO PAULO - SP",
+        "cep": "03315-000",
+        "email": "clinica@essencialimplantes.com.br",
+        "distancia": 8.74,
+        "LatLng": {
+            "lat": -23.5419452,
+            "lng": -46.5671365
+        }
+    }
+]

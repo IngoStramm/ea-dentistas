@@ -1,0 +1,42 @@
+#map {
+    width: 100%;
+    height: 500px;
+}
+
+.listagem-wrapper {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: row;
+}
+
+.listagem-wrapper .listagem-col {
+    flex: 1 0 0;
+}
+
+.pagination-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.pagination-numbers {
+    display: flex;
+    gap: 10px;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.pagination-numbers button,
+.pagination-arrow {
+    display: block;
+    cursor: pointer;
+}
+
+.pagination-numbers .current button {
+    outline: 5px solid;
+}
