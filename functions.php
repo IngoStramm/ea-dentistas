@@ -1,5 +1,41 @@
 <?php
 
+function ea_dentistas_get_totvs_api()
+{
+    $username = "admin";
+    $password = "Fender03";
+    $remote_url = 'https://estheticalignerortho.protheus.cloudtotvs.com.br:4050/rest/api/v1/ListaClientes/List';
+    $auth = base64_encode("$username:$password");
+
+    // Create a stream
+    $opts = array(
+        // "ssl" => [
+        //     "verify_peer" => false,
+        //     "verify_peer_name" => false,
+        // ],
+        'http' => array(
+            'method' => "GET",
+            'header' => "Authorization: Basic " . $auth,
+        )
+    );
+
+    $context = stream_context_create($opts);
+
+    // Open the file using the HTTP headers set above
+    $json = file_get_contents($remote_url, false, $context);
+    // $json = str_replace('""', '"', $json);
+    //     $json=str_replace(
+    // '},
+
+    // ]',"}
+
+    // ]",$json);
+
+    $data = json_decode($json, true);
+
+    return $data;
+}
+
 function ea_dentistas_fetch_listagem()
 {
     $json_url = ea_dentistas_get_option('json_url');
@@ -118,7 +154,7 @@ function teste()
     $geocode_key = ea_dentistas_get_option('geocode_key');
     $json_url = ea_dentistas_get_option('json_url');
     $dentistas_page_id = ea_dentistas_get_option('dentistas_page_id');
-    ea_dentistas_debug(get_the_permalink($dentistas_page_id));
+    ea_dentistas_debug(ea_dentistas_get_totvs_api());
 }
 
 // add_action('wp_head', 'teste');
