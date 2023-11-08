@@ -107,6 +107,7 @@ function initMap() {
         google.maps.event.addListener(itemLocationMarker, 'click', (function (itemLocationMarker, i) {
 
             return function () {
+                closeAllInfoWindows();
                 itemLocationInfowindow.setContent(itemLocationContentString);
                 itemLocationInfowindow.open(map, itemLocationMarker);
             };
