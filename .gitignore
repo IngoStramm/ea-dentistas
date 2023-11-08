@@ -11,3 +11,4 @@ src/.sass-cache
 .editorconfig
 .distignore
 .vscode
+assets/js/samples

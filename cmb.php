@@ -1,93 +1,145 @@
 <?php
 
-function ea_dentistas_register_options_submenu_for_page_post_type()
+add_action('cmb2_admin_init', 'ea_register_dentista_metabox');
+
+function ea_register_dentista_metabox()
 {
-
-    /**
-     * Registers options page menu item and form.
-     */
-    $cmb = new_cmb2_box(array(
-        'id'           => 'ea_dentistas_options_submenu_page',
-        'title'        => esc_html__('EA Dentistas', 'cmb2'),
-        'object_types' => array('options-page'),
-
-        /*
-		 * The following parameters are specific to the options-page box
-		 * Several of these parameters are passed along to add_menu_page()/add_submenu_page().
-		 */
-
-        'option_key'      => 'ea_dentistas_page_options', // The option key and admin menu page slug.
-        // 'icon_url'        => '', // Menu icon. Only applicable if 'parent_slug' is left empty.
-        // 'menu_title'      => esc_html__( 'Options', 'cmb2' ), // Falls back to 'title' (above).
-        'parent_slug'     => 'options-general.php', // Make options page a submenu item of the themes menu.
-        // 'capability'      => 'manage_options', // Cap required to view options-page.
-        // 'position'        => 1, // Menu position. Only applicable if 'parent_slug' is left empty.
-        // 'admin_menu_hook' => 'network_admin_menu', // 'network_admin_menu' to add network-level options page.
-        // 'display_cb'      => false, // Override the options-page form output (CMB2_Hookup::options_page_output()).
-        // 'save_button'     => esc_html__( 'Save Theme Options', 'cmb2' ), // The text for the options-page save button. Defaults to 'Save'.
-        // 'disable_settings_errors' => true, // On settings pages (not options-general.php sub-pages), allows disabling.
-        // 'message_cb'      => 'ea_dentistas_options_page_message_callback',
+    $dentista = new_cmb2_box(array(
+        'id'            => 'ea_dentista_metabox',
+        'title'         => esc_html__('Opções', 'ea'),
+        'object_types'  => array('dentista'), // Post type
     ));
 
-    $cmb->add_field(array(
-        'name'    => esc_html__('URL da Planilha em formato .csv', 'ea-dentistas'),
-        'description' => esc_html__('Não usado mais, mantido como referência', 'ea-dentistas'),
-        'id'      => 'planilha_url',
-        'type'    => 'text_url',
+    $dentista->add_field(array(
+        'name'       => esc_html__('Destaque', 'ea'),
+        'id'         => 'ea_dentista_destaque',
+        'type'       => 'checkbox',
     ));
 
-    $cmb->add_field(array(
-        'name'    => esc_html__('URL do arquivo em fromato .json com os dados dos dentistas', 'ea-dentistas'),
-        'id'      => 'json_url',
-        'type'    => 'text_url',
+    $dentista->add_field(array(
+        'name'       => esc_html__('Código', 'ea'),
+        'id'         => 'ea_dentista_codigo',
+        'type'       => 'text_medium',
+        'attributes' => array(
+            'required' => true
+        )
     ));
 
-    $cmb->add_field(array(
-        'name'    => esc_html__('Google Maps Key', 'ea-dentistas'),
-        'id'      => 'gmaps_key',
-        'type'    => 'text',
+    $dentista->add_field(array(
+        'name'       => esc_html__('CRO', 'ea'),
+        'id'         => 'ea_dentista_cro',
+        'type'       => 'text_small', 
+        'attributes' => array(
+            'required' => true
+        )
     ));
 
-    $cmb->add_field(array(
-        'name'    => esc_html__('Geocode Key', 'ea-dentistas'),
-        'id'      => 'geocode_key',
-        'type'    => 'text',
+    $dentista->add_field(array(
+        'name'       => esc_html__('Endereço', 'ea'),
+        'id'         => 'ea_dentista_endereco',
+        'type'       => 'text',
+        'attributes' => array(
+            'required' => true
+        )
     ));
 
-    $cmb->add_field(array(
-        'name'    => esc_html__('Página com a listagem de Dentistas', 'ea-dentistas'),
-        'id'      => 'dentistas_page_id',
-        'type'    => 'select',
-        'show_option_none' => true,
-        'options' => function () {
-            $pages = get_pages();
-            $options = [];
-            foreach ($pages as $page) {
-                $options[$page->ID] = $page->post_title;
-            }
-            return $options;
-        }
+    $dentista->add_field(array(
+        'name'       => esc_html__('Número', 'ea'),
+        'id'         => 'ea_dentista_numero',
+        'type'       => 'text_small',
+        'attributes' => array(
+            'required' => true
+        )
     ));
-}
-add_action('cmb2_admin_init', 'ea_dentistas_register_options_submenu_for_page_post_type');
 
-function ea_dentistas_get_option($key = '', $default = false)
-{
-    if (function_exists('cmb2_get_option')) {
-        // Use cmb2_get_option as it passes through some key filters.
-        return cmb2_get_option('ea_dentistas_page_options', $key, $default);
-    }
+    $dentista->add_field(array(
+        'name'       => esc_html__('Bairro', 'ea'),
+        'id'         => 'ea_dentista_bairro',
+        'type'       => 'text_medium',
+        'attributes' => array(
+            'required' => true
+        )
+    ));
 
-    // Fallback to get_option if CMB2 is not loaded yet.
-    $opts = get_option('ea_dentistas_page_options', $default);
+    $dentista->add_field(array(
+        'name'       => esc_html__('Cidade', 'ea'),
+        'id'         => 'ea_dentista_cidade',
+        'type'       => 'text',
+        'attributes' => array(
+            'required' => true
+        )
+    ));
 
-    $val = $default;
+    $dentista->add_field(array(
+        'name'       => esc_html__('Estado', 'ea'),
+        'id'         => 'ea_dentista_estado',
+        'type'       => 'select',
+        'options'   => function () {
+            $placeholder = array('' => 'Selecione um Estado');
+            $ufs = ea_lista_ufs();
+            $return = $placeholder + $ufs;
+            return $return;
+        },'attributes' => array(
+            'required' => true
+        )
+    ));
 
-    if ('all' == $key) {
-        $val = $opts;
-    } elseif (is_array($opts) && array_key_exists($key, $opts) && false !== $opts[$key]) {
-        $val = $opts[$key];
-    }
 
-    return $val;
+    $dentista->add_field(array(
+        'name'       => esc_html__('CEP', 'ea'),
+        'id'         => 'ea_dentista_cep',
+        'type'       => 'text_medium', 
+        'attributes' => array(
+            'required' => true
+        )
+    ));
+
+    $dentista->add_field(array(
+        'name'       => esc_html__('Endereço completo', 'ea'),
+        'id'         => 'ea_dentista_endereco_completo',
+        'type'       => 'text', 
+    ));
+
+    $dentista->add_field(array(
+        'name'       => esc_html__('DDD', 'ea'),
+        'id'         => 'ea_dentista_ddd',
+        'type'       => 'text_small', 
+    ));
+
+    $dentista->add_field(array(
+        'name'       => esc_html__('Telefone 1', 'ea'),
+        'id'         => 'ea_dentista_telefone',
+        'type'       => 'text_medium',
+    ));
+
+    $dentista->add_field(array(
+        'name'       => esc_html__('DDD2', 'ea'),
+        'id'         => 'ea_dentista_ddd2',
+        'type'       => 'text_small',
+    ));
+
+    $dentista->add_field(array(
+        'name'       => esc_html__('Telefone 2', 'ea'),
+        'id'         => 'ea_dentista_telefone2',
+        'type'       => 'text_medium',
+    ));
+
+    $dentista->add_field(array(
+        'name'       => esc_html__('Telefone de contato', 'ea'),
+        'id'         => 'ea_dentista_telefone_contato',
+        'type'       => 'text_medium',
+    ));
+
+    $dentista->add_field(array(
+        'name'       => esc_html__('Latitude', 'ea'),
+        'id'         => 'ea_dentista_lat',
+        'type'       => 'text_small',
+    ));
+
+    $dentista->add_field(array(
+        'name'       => esc_html__('Longitude', 'ea'),
+        'id'         => 'ea_dentista_lng',
+        'type'       => 'text_small',
+    ));
+
 }

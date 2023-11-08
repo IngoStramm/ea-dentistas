@@ -3,13 +3,48 @@ let marker;
 let lat, lng;
 let autocomplete;
 
+const allInfoWindows = [];
+const markers = {};
+const itemsLista = Object.values(ajax_object.listagem);
+const itemsDestaques = itemsLista.filter(item => item.destaque === 'on');
+const itensNaoDestaques = itemsLista.filter(item => item.destaque !== 'on');
+const todosDentistas = itemsDestaques.concat(itensNaoDestaques);
+console.log('todosDentistas', todosDentistas);
+
+function removeAccents(str) {
+    return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 lat = ajax_object.lat;
 lng = ajax_object.lng;
 
+const estadoUsuario = ajax_object.estado ? removeAccents(ajax_object.estado.toUpperCase()) : '';
+const cidadeUsuario = ajax_object.cidade ? removeAccents(ajax_object.cidade.toUpperCase()) : '';
+console.log('estadoUsuario', estadoUsuario);
+console.log('cidadeUsuario', cidadeUsuario);
+
+function closeAllInfoWindows() {
+    for (const item of allInfoWindows) {
+        item.close();
+    }
+}
+
+function btnClick(btn, google) {
+    btn.addEventListener('click', e => {
+        e.preventDefault();
+        closeAllInfoWindows();
+        const markerid = btn.dataset.markerid;
+        console.log('markerid', markerid);
+        google.maps.event.trigger(markers[markerid], 'click');
+    });
+}
 
 function initGoogleApi() {
-    initMap();
-    initAutocomplete();
+    document.addEventListener('DOMContentLoaded', function () {
+        eaDentistasListagem();
+        initAutocomplete();
+    });
+
 }
 
 function initMap() {
@@ -30,7 +65,7 @@ function initMap() {
     console.log('2 - lat', lat);
     console.log('2 - lng', lng);
     map = new google.maps.Map(mapDiv, {
-        zoom: 12,
+        zoom: 15,
         center: defaultLocation,
         mapTypeControl: false,
     });
@@ -41,29 +76,26 @@ function initMap() {
     //     title: "Sua localização",
     // });
 
-    const listagem = ajax_object.listagem;
-    const markers = [];
-    const allInfoWindows = [];
-    listagem.map((item, i) => {
-        const LatLng = { lat: item.lat, lng: item.long };
+    todosDentistas.forEach((dentista, i) => {
+        const LatLng = { lat: parseFloat(dentista.lat), lng: parseFloat(dentista.lng) };
         const itemLocation = LatLng;
         const itemLocationContentString =
             `<div>
-                <h5>${item.nome_fantasia}</h5>
+                <h5>${dentista.nome}</h5>
                 <address>
-                Endereço: ${item.endereco}
-                Telefone: ${item.telefone}
+                Endereço: ${dentista.endereco_completo}
+                Telefone: ${dentista.telefone_contato}
                 </address>
             </div>`;
         const itemLocationInfowindow = new google.maps.InfoWindow({
             content: itemLocationContentString,
-            ariaLabel: item.nome_fantasia,
+            ariaLabel: dentista.nome_fantasia,
         });
         allInfoWindows.push(itemLocationInfowindow);
         const itemLocationMarker = new google.maps.Marker({
             position: itemLocation,
             map,
-            title: item.nome_fantasia,
+            title: dentista.nome_fantasia,
         });
         // itemLocationMarker.addListener("click", () => {
         //     itemLocationInfowindow.open({
@@ -80,29 +112,10 @@ function initMap() {
             };
 
         })(itemLocationMarker, i));
-        markers.push(itemLocationMarker);
-        return item;
+        // markers.push(itemLocationMarker);
+        markers[dentista.post_id] = itemLocationMarker;
     });
 
-    const btns = document.querySelectorAll('.listagem-item-btn');
-    for (const btn of btns) {
-        btnClick(btn, google);
-    }
-
-    function btnClick(btn, google) {
-        btn.addEventListener('click', e => {
-            e.preventDefault();
-            closeAllInfoWindows();
-            const markerid = btn.dataset.markerid;
-            google.maps.event.trigger(markers[markerid], 'click');
-        });
-    }
-
-    function closeAllInfoWindows() {
-        for (const item of allInfoWindows) {
-            item.close();
-        }
-    }
 }
 
 function initAutocomplete() {
@@ -114,7 +127,7 @@ function initAutocomplete() {
         autocompleteInput,
         {
             componentRestrictions: { 'country': ['BR'] },
-            fields: ['place_id', 'geometry', 'name']
+            fields: ['place_id', 'geometry', 'name', 'address_components']
         }
     );
     autocomplete.addListener('place_changed', onPlaceChanged);
@@ -125,6 +138,8 @@ function onPlaceChanged() {
     const eaAutocompleteForm = document.querySelector('.ea-autocomplete-form');
     const latInput = eaAutocompleteForm.querySelector('input[name="lat"]');
     const lngInput = eaAutocompleteForm.querySelector('input[name="lng"]');
+    const stateInput = eaAutocompleteForm.querySelector('input[name="estado"]');
+    const cidadeInput = eaAutocompleteForm.querySelector('input[name="cidade"]');
 
     if (typeof eaAutocompleteForm === undefined || !eaAutocompleteForm) {
         console.error('Não foi possível encontrar o formulário do autocomplete');
@@ -141,18 +156,36 @@ function onPlaceChanged() {
         return;
     }
 
+    if (typeof stateInput === undefined || !stateInput) {
+        console.error('Não foi possível encontrar o input de Estado');
+        return;
+    }
+
+    if (typeof cidadeInput === undefined || !cidadeInput) {
+        console.error('Não foi possível encontrar o input de Estado');
+        return;
+    }
+
     if (!place.geometry) {
         document.getElementById('autocomplete').placeholder = 'Digite um endereço';
         latInput.value = '';
         lngInput.value = '';
+        stateInput.value = '';
+        cidadeInput.value = '';
     } else {
         lat = place.geometry.location.lat();
         lng = place.geometry.location.lng();
         console.log('lat', lat);
         console.log('lng', lng);
+        const estado = place.address_components.filter(item => item.types.includes('administrative_area_level_1'));
+        const cidade = place.address_components.filter(item => item.types.includes('administrative_area_level_2'));
+        console.log('estado', estado[0].short_name);
+        console.log('cidade', cidade[0].short_name);
         document.getElementById('autocomplete').innerHTML = place.name;
         latInput.value = lat;
         lngInput.value = lng;
+        stateInput.value = estado[0].short_name;
+        cidadeInput.value = cidade[0].short_name;
     }
 }
 
@@ -240,12 +273,13 @@ function eaPaginationPrevNext(prevBtn, nextBtn, items, paginationNumbers, pagina
     });
 }
 
-function eaDentistasPagination() {
+function eaDentistasPagination(items) {
     const paginationLists = document.querySelectorAll('.pagination-list');
     for (const lista of paginationLists) {
-        const items = lista.querySelectorAll('.listagem-item');
+        // const items = lista.querySelectorAll('.listagem-item');
         const totalItems = items.length;
-        const itemsPerPage = 3;
+        console.log('totalItems', totalItems);
+        const itemsPerPage = 10;
         const totalPages = Math.ceil(totalItems / itemsPerPage);
 
         const paginationContainer = lista.parentElement.querySelector('.pagination-container');
@@ -286,6 +320,102 @@ function eaDentistasGetGeolocation({ lat, lng }) {
 
 }
 
-document.addEventListener('DOMContentLoaded', function () {
-    eaDentistasPagination();
-});
+function eaDentistasListagem() {
+    const ul = document.getElementById('listagem-items');
+    if (typeof ul === undefined || !ul) {
+        return;
+    }
+
+    // const itemPorEstado = items.filter(item => removeAccents(item.estado.toUpperCase()) === estadoUsuario);
+    // const itemPorCidade = itemPorEstado.filter(item => removeAccents(item.cidade.toUpperCase()) === cidadeUsuario);
+
+    // items.forEach((item, i) => {
+    //     const dentista = item;
+    //     const li = document.createElement('li');
+    //     li.classList.add('listagem-item');
+    //     li.innerHTML = `
+    //     <h4 class="nome-dentista">${dentista.nome}</h4>
+    //     <address>
+    //         <p class="endereco-dentista">${dentista.endereco_completo}</p>
+    //         <ul>
+    //             <li class="telefone-dentista">${dentista.telefone_contato}</li>
+    //         </ul>
+    //     </address>
+    //     `;
+    //     const button = document.createElement('button');
+    //     button.classList.add('listagem-item-btn');
+    //     button.setAttribute('data-markerid', i);
+    //     button.innerText = 'Visualizar';
+    //     li.append(button);
+    //     ul.append(li);
+    // });
+    // eaDentistasPagination(itemPorCidade);
+
+    const options = {
+        valueNames: [
+            'nome',
+            'endereco_completo',
+            'telefone_contato',
+            'destaque',
+            { name: 'post_id', attr: 'data-markerid' },
+        ],
+        page: 5,
+        pagination: true,
+        item: `
+        <li>
+            <input class="destaque" type="hidden" />
+            <input class="cidade" type="hidden" />
+            <input class="estado" type="hidden" />
+            <h3 class="nome"></h3>
+            <p class="endereco_completo"></p>
+            <ul>
+                <li class="telefone_contato"></li>
+                <button class="listagem-item-btn post_id">Visualizar</button>
+            </ul>
+        </li>`
+    };
+
+    const listaDentistas = new List('lista-dentistas', options, todosDentistas);
+
+    listaDentistas.sort('nome', { alphabet: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÀàÁáÃãÂâÉéÈèÍíÓóÚúÇç" });
+
+    listaDentistas.sort(['destaque'], { order: 'desc' }, { alphabet: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÀàÁáÃãÂâÉéÈèÍíÓóÚúÇç" });
+
+    if (cidadeUsuario) {
+        listaDentistas.search(cidadeUsuario, ['cidade']);
+        const pesquisarPorCidadeInput = document.getElementById('pesquisar-por-cidade');
+        if (typeof pesquisarPorCidadeInput !== undefined && pesquisarPorCidadeInput) {
+            pesquisarPorCidadeInput.value = cidadeUsuario;
+        }
+    }
+
+    const searchCidade = document.getElementById('pesquisar-por-cidade');
+    const searchEstado = document.getElementById('pesquisar-por-estado');
+
+    searchCidade.addEventListener('keyup', e => {
+        const s = removeAccents(e.target.value);
+        listaDentistas.search(s, ['cidade']);
+        searchEstado.value = '';
+    });
+
+    searchEstado.addEventListener('keyup', e => {
+        const s = removeAccents(e.target.value);
+        listaDentistas.search(s, ['estado']);
+        searchCidade.value = '';
+    });
+
+    const btns = document.querySelectorAll('.listagem-item-btn');
+    for (const btn of btns) {
+        btnClick(btn, google);
+    }
+
+    listaDentistas.on('updated', e => {
+        const btns = document.querySelectorAll('.listagem-item-btn');
+        for (const btn of btns) {
+            btnClick(btn, google);
+        }
+
+    });
+
+    initMap();
+}
