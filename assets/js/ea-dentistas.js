@@ -362,9 +362,10 @@ function eaDentistasListagem() {
         ],
         page: 5,
         pagination: true,
-        item: `
-        <li>
-            <input class="destaque" type="hidden" />
+        item: function (values) {
+            const destaque = values.destaque === 'on' ? 'destaque' : '';
+            return `
+        <li class="${destaque}">
             <input class="cidade" type="hidden" />
             <input class="estado" type="hidden" />
             <h3 class="nome"></h3>
@@ -374,6 +375,7 @@ function eaDentistasListagem() {
                 <button class="listagem-item-btn post_id">Visualizar</button>
             </ul>
         </li>`
+        }
     };
 
     const listaDentistas = new List('lista-dentistas', options, todosDentistas);
