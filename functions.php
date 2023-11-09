@@ -363,6 +363,7 @@ function ea_dentistas_delete_posts()
     // Dentistas da API
     $listagem_api = ea_dentistas_get_listagem_api();
     $error_msg = null;
+    $deleted_posts = [];
 
     // Error caso não encontre dentistas na API
     if (!$listagem_api) {
