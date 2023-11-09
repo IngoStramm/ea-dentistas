@@ -218,8 +218,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 listaItemEnd.style.fontWeight = '500';
                 // }
             } else {
-                listaItemUpdatedPosts.innerText = 'Ocorreu um erro de conexão, tente novamente.';
+                listaItemUpdatedPosts.innerText = 'Ocorreu um erro de conexão, tentando novamente em 5 segundos...';
                 listaItemUpdatedPosts.style.color = '#ff0000';
+                setTimeout(ea_atualiza_coordenadas(btn), 5000);
             }
             delete btn.dataset.disabled;
             btn.innerText = 'Atualizar dentistas';
