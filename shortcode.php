@@ -89,10 +89,10 @@ function ea_dentistas_autocomplete()
     $output = '';
     $output .= '<form class="ea-autocomplete-form" action="' . $action_url . '" method="post">';
     $output .=      '<input id="autocomplete" name="autocomplete" placeholder="Digite um endereço" type="text" />';
-    $output .=      '<input name="lat" type="text" />';
-    $output .=      '<input name="lng" type="text" />';
-    $output .=      '<input name="estado" type="text" />';
-    $output .=      '<input name="cidade" type="text" />';
+    $output .=      '<input name="lat" type="hidden" />';
+    $output .=      '<input name="lng" type="hidden" />';
+    $output .=      '<input name="estado" type="hidden" />';
+    $output .=      '<input name="cidade" type="hidden" />';
     $output .=      '<button>' . __('Enviar', 'ea-dentistas') . '</button>';
     $output .= '</form>';
     return $output;
