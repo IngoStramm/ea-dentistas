@@ -15,7 +15,7 @@ function ea_dentistas_frontend_scripts()
 
     wp_register_script('list-js', EA_DENTISTAS_URL . 'assets/js/list' . $min . '.js', array('jquery'), '1.0.0', true);
 
-    wp_register_script('ea-dentistas-script', EA_DENTISTAS_URL . 'assets/js/ea-dentistas' . $min . '.js', array('jquery', 'list-js'), '1.0.1', true);
+    wp_register_script('ea-dentistas-script', EA_DENTISTAS_URL . 'assets/js/ea-dentistas' . $min . '.js', array('jquery', 'list-js'), '1.0.2', true);
 
     wp_enqueue_script('ea-dentistas-script');
 
@@ -49,7 +49,7 @@ function ea_dentistas_admin_scripts() {
 
     $min = (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1', '10.0.0.3'))) ? '' : '.min';
 
-    wp_register_script('ea-dentistas-admin-script', EA_DENTISTAS_URL . 'assets/js/ea-dentistas-admin' . $min . '.js', array('jquery'), '1.0.3', true);
+    wp_register_script('ea-dentistas-admin-script', EA_DENTISTAS_URL . 'assets/js/ea-dentistas-admin' . $min . '.js', array('jquery'), '1.0.4', true);
 
     wp_enqueue_script('ea-dentistas-admin-script');
 
