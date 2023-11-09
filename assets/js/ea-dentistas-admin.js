@@ -218,9 +218,23 @@ document.addEventListener('DOMContentLoaded', function () {
                 listaItemEnd.style.fontWeight = '500';
                 // }
             } else {
-                listaItemUpdatedPosts.innerText = 'Ocorreu um erro de conexão, tentando novamente em 5 segundos...';
+                let timer = 5;
+                let str = `Ocorreu um erro de conexão, tentando novamente em ${timer} segundos...`;
+                listaItemUpdatedPosts.innerText = str;
                 listaItemUpdatedPosts.style.color = '#ff0000';
-                return setTimeout(ea_atualiza_coordenadas(btn), 5000);
+                const contagemRegressiva = (timer) => {
+                    setTimeout(() => {
+                        if (timer <= 0) {
+                            str = `Retomando Etapa 4.`;
+                            div.innerText = str;
+                            return ea_atualiza_coordenadas(btn);
+                        }
+                        timer--;
+                        div.innerText = str;
+                        contagemRegressiva(timer);
+                    }, 1000);
+                };
+                contagemRegressiva(timer);
             }
             delete btn.dataset.disabled;
             btn.innerText = 'Atualizar dentistas';
