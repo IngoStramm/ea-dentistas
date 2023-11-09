@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ea_novos_dentistas(btn);
             } else {
                 listaItemDeletedPosts.innerText = 'Ocorreu um erro de conexão, tente novamente.';
-                listaItemUpdatedPosts.style.color = '#ff0000';
+                listaItemDeletedPosts.style.color = '#ff0000';
                 delete btn.dataset.disabled;
                 btn.innerText = 'Atualizar dentistas';
             }
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ea_atualiza_dentistas(btn);
             } else {
                 listaItemDeletedPosts.innerText = 'Ocorreu um erro de conexão, tente novamente.';
-                listaItemUpdatedPosts.style.color = '#ff0000';
+                listaItemDeletedPosts.style.color = '#ff0000';
                 delete btn.dataset.disabled;
                 btn.innerText = 'Atualizar dentistas';
             }
@@ -160,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 ea_atualiza_coordenadas(btn);
             } else {
                 listaItemDeletedPosts.innerText = 'Ocorreu um erro de conexão, tente novamente.';
-                listaItemUpdatedPosts.style.color = '#ff0000';
+                listaItemDeletedPosts.style.color = '#ff0000';
                 delete btn.dataset.disabled;
                 btn.innerText = 'Atualizar dentistas';
             }
