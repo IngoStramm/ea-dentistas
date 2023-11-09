@@ -5,6 +5,7 @@
     --branco: white;
     --dourado: gold;
     --cinza-claro: #f0f0f0;
+    --cinza-menos-claro: #e7e7e7;
 }
 
 .ea-autocomplete-form {
@@ -120,7 +121,7 @@
     align-items: flex-start;
     gap: 5px;
     padding: 15px;
-    background-color: var(--cinza-claro);
+    background-color: var(--cinza-menos-claro);
     border-radius: 5px;
 }
 #listagem-items li .icon-destaque {
