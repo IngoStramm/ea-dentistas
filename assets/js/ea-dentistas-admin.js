@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', function () {
             return;
         }
         const listaItemProcessing = document.createElement('li');
-        listaItemProcessing.innerText = 'Etapa 4: atualizar a latitide e longitude dos dentistas.';
+        listaItemProcessing.innerText = 'Etapa 4: atualizar a latitude e longitude dos dentistas.';
         listaEtapa4.append(listaItemProcessing);
 
         const listaExecutandoEtapa = document.createElement('li');
