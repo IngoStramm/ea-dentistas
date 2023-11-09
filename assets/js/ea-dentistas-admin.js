@@ -220,7 +220,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 listaItemUpdatedPosts.innerText = 'Ocorreu um erro de conexão, tentando novamente em 5 segundos...';
                 listaItemUpdatedPosts.style.color = '#ff0000';
-                setTimeout(ea_atualiza_coordenadas(btn), 5000);
+                return setTimeout(ea_atualiza_coordenadas(btn), 5000);
             }
             delete btn.dataset.disabled;
             btn.innerText = 'Atualizar dentistas';
