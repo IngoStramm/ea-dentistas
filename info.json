@@ -1,6 +1,6 @@
 {
     "name": "EA Dentistas",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "download_url": "https://github.com/IngoStramm/ea-dentistas/raw/master/dist/ea-dentistas.zip",
     "homepage": "https://agencialaf.com",
     "requires": "4.7",

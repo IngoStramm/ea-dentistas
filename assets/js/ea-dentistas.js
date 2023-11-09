@@ -9,7 +9,7 @@ const itemsLista = Object.values(ajax_object.listagem);
 const itemsDestaques = itemsLista.filter(item => item.destaque === 'on');
 const itensNaoDestaques = itemsLista.filter(item => item.destaque !== 'on');
 const todosDentistas = itemsDestaques.concat(itensNaoDestaques);
-console.log('todosDentistas', todosDentistas);
+// console.log('todosDentistas', todosDentistas);
 
 function removeAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -20,8 +20,8 @@ lng = ajax_object.lng;
 
 const estadoUsuario = ajax_object.estado ? removeAccents(ajax_object.estado.toUpperCase()) : '';
 const cidadeUsuario = ajax_object.cidade ? removeAccents(ajax_object.cidade.toUpperCase()) : '';
-console.log('estadoUsuario', estadoUsuario);
-console.log('cidadeUsuario', cidadeUsuario);
+// console.log('estadoUsuario', estadoUsuario);
+// console.log('cidadeUsuario', cidadeUsuario);
 
 function closeAllInfoWindows() {
     for (const item of allInfoWindows) {
@@ -34,7 +34,7 @@ function btnClick(btn, google) {
         e.preventDefault();
         closeAllInfoWindows();
         const markerid = btn.dataset.markerid;
-        console.log('markerid', markerid);
+        // console.log('markerid', markerid);
         google.maps.event.trigger(markers[markerid], 'click');
     });
 }
@@ -62,8 +62,8 @@ function initMap() {
     lat = Number(lat);
     lng = Number(lng);
     const defaultLocation = { lat, lng };
-    console.log('2 - lat', lat);
-    console.log('2 - lng', lng);
+    // console.log('2 - lat', lat);
+    // console.log('2 - lng', lng);
     map = new google.maps.Map(mapDiv, {
         zoom: 15,
         center: defaultLocation,
@@ -110,6 +110,8 @@ function initMap() {
                 closeAllInfoWindows();
                 itemLocationInfowindow.setContent(itemLocationContentString);
                 itemLocationInfowindow.open(map, itemLocationMarker);
+                map.setZoom(16);
+                map.setCenter(itemLocationMarker.getPosition());
             };
 
         })(itemLocationMarker, i));
@@ -176,12 +178,12 @@ function onPlaceChanged() {
     } else {
         lat = place.geometry.location.lat();
         lng = place.geometry.location.lng();
-        console.log('lat', lat);
-        console.log('lng', lng);
+        // console.log('lat', lat);
+        // console.log('lng', lng);
         const estado = place.address_components.filter(item => item.types.includes('administrative_area_level_1'));
         const cidade = place.address_components.filter(item => item.types.includes('administrative_area_level_2'));
-        console.log('estado', estado[0].short_name);
-        console.log('cidade', cidade[0].short_name);
+        // console.log('estado', estado[0].short_name);
+        // console.log('cidade', cidade[0].short_name);
         document.getElementById('autocomplete').innerHTML = place.name;
         latInput.value = lat;
         lngInput.value = lng;
@@ -279,7 +281,7 @@ function eaDentistasPagination(items) {
     for (const lista of paginationLists) {
         // const items = lista.querySelectorAll('.listagem-item');
         const totalItems = items.length;
-        console.log('totalItems', totalItems);
+        // console.log('totalItems', totalItems);
         const itemsPerPage = 10;
         const totalPages = Math.ceil(totalItems / itemsPerPage);
 
@@ -304,15 +306,14 @@ function eaDentistasPagination(items) {
 function eaDentistasGetGeolocation({ lat, lng }) {
     navigator.geolocation.getCurrentPosition(
         function (position) {
-            console.log(`Deu certo!`);
             lat = position.coords.latitude;
             lng = position.coords.longitude;
-            console.log('1 - lat', lat);
-            console.log('1 - lng', lng);
+            // console.log('1 - lat', lat);
+            // console.log('1 - lng', lng);
             return { lat, lng };
         },
         function errorCallback(error) {
-            console.log(`Deu erro`, error);
+            console.log(`Erro:`, error);
             // lat = '-23.5502909';
             // lng = '-46.6341887';
             // initMap();
@@ -357,24 +358,53 @@ function eaDentistasListagem() {
             'nome',
             'endereco_completo',
             'telefone_contato',
-            'destaque',
-            { name: 'post_id', attr: 'data-markerid' },
+            'destaque'
         ],
-        page: 5,
-        pagination: true,
+        page: 10,
+        pagination: [{
+            paginationClass: 'pagination-top',
+            innerWindow: 2,
+            outerWindow: 2,
+            item: `<li><a class='page'></a></li>`
+        },
+        {
+            paginationClass: 'pagination-bottom',
+            innerWindow: 2,
+            outerWindow: 2,
+            item: `<li><a class='page'></a></li>`
+        }],
         item: function (values) {
             const destaque = values.destaque === 'on' ? 'destaque' : '';
+            const iconStar = `<span class="icon-destaque"></span>`;
+            const showIcon = values.destaque === 'on' ? iconStar : '';
+            const telExibicao = () => {
+                const numero = values.telefone_contato;
+                let parte1 = '';
+                let parte2 = '';
+                if (numero.length >= 11) {
+                    // celular
+                    parte1 = numero.slice(2, 7);
+                    parte2 = numero.slice(7);
+                } else {
+                    //fixo
+                    parte1 = numero.slice(2, 6);
+                    parte2 = numero.slice(6);
+                }
+                const ddd = numero.slice(0, 2);
+                return `(${ddd}) ${parte1}-${parte2}`;
+            };
+            const linkTel = `<a class="link-telefone" href="tel:+55${values.telefone_contato}">${telExibicao()}</a>`;
             return `
         <li class="${destaque}">
             <input class="cidade" type="hidden" />
             <input class="estado" type="hidden" />
-            <h3 class="nome"></h3>
+            <h3>${showIcon}<span class="nome"></span></h3>
             <p class="endereco_completo"></p>
-            <ul>
-                <li class="telefone_contato"></li>
-                <button class="listagem-item-btn post_id">Visualizar</button>
+            <ul class="contatos">
+                <li>${linkTel}</li>
             </ul>
-        </li>`
+            <button class="listagem-item-btn" data-markerid="${values.post_id}">Visualizar</button>
+        </li>`;
         }
     };
 

@@ -52,43 +52,25 @@ function ea_dentistas_listagem()
     //     return $listagem;
     // }
     $output .= '<section class="listagem-wrapper">';
-    $output .=      '<div class="listagem-col">';
+    $output .=      '<div id="left-col" class="listagem-col">';
     $output .=      '<div id="lista-dentistas">';
 
+    $output .=      '<div class="lista-dentistas-filtros">';
     $output .=      '<input type="text" id="pesquisar-por-cidade" placeholder="' . __('Pesquisar por cidade', 'ea-dentista') . '" />';
     $output .=      '<input type="text" id="pesquisar-por-estado" placeholder="' . __('Pesquisar por Estado', 'ea-dentista') . '" />';
+    $output .=      '</div>';
+
+    $output .= '<ul class="pagination pagination-top"></ul>';
 
     $output .=          '<ul id="listagem-items" class="list listagem-items pagination-list" aria-live="polite">';
     $i = 0;
-    // ea_dentistas_debug($listagem);
-    // foreach ($listagem as $item) {
-    //     $output .=              '<li class="listagem-item">';
-    //     $output .=                  '<h4>' . $item['nome_fantasia'] . '</h4>';
-    //     $output .=                  '<address>';
-    //     $output .=                      '<p>' . $item['endereco'] . '</p>';
-    //     $output .=                      '<ul>';
-    //     $output .=                          '<li>' . __('Contato', 'ea-dentistas') . ' ' . $item['telefone'] . '</li>';
-    //     // $output .=                          '<li>' . __('E-mail', 'ea-dentistas') . ' ' . $item['email'] . '</li>';
-    //     $output .=                      '</ul>';
-    //     $output .=                  '</address>';
-    //     $output .=                  '<button class="listagem-item-btn" data-markerid="' . $i . '">' . __('Visualizar', 'ea-dentistas') . '</button>';
-    //     $output .=              '</li>';
-    //     $i++;
-    // }
     $output .=          '</ul>';
 
-    // $output .=      '<nav class="pagination-container">
-    //                     <input type="hidden" name="current-page" value="1" />
-    //                     <button class="pagination-prev pagination-arrow" aria-label="' . __('Voltar', 'ea-dentistas') . '" title="' . __('Voltar', 'ea-dentistas') . '">&lt;</button>
-    //                     <ul class="pagination-numbers"></ul>
-    //                     <button class="pagination-next pagination-arrow" aria-label="' . __('Avançar', 'ea-dentistas') . '" title="' . __('Avançar', 'ea-dentistas') . '">&gt;</button>
-    //                 </nav>';
-
-    $output .= '<ul class="pagination"></ul>';
+    $output .= '<ul class="pagination pagination-bottom"></ul>';
 
     $output .=      '</div>';
     $output .=      '</div>';
-    $output .=      '<div class="listagem-col">';
+    $output .=      '<div id="right-col" class="listagem-col">';
     $output .=          '<div id="map"></div>';
     $output .=      '</div>';
     $output .= '</section>';
