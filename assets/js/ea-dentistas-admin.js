@@ -214,6 +214,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 // } else {
                 listaItemStepFinished.innerText = 'Etapa 4 concluída.';
                 listaItemEnd.innerText = 'Atualização concluída';
+                listaItemEnd.style.color = '#1ba71b';
+                listaItemEnd.style.fontWeight = '500';
                 // }
             } else {
                 listaItemUpdatedPosts.innerText = 'Ocorreu um erro de conexão, tente novamente.';
@@ -288,7 +290,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 } else {
                     const listaItemFailConnection = document.createElement('li');
-                    listaItemFailConnection.innerText = 'Ocorreu um erro de conexão.';
+                    listaItemFailConnection.innerText = 'Ocorreu um erro de conexão, tente novamente';
                     listaItemFailConnection.style.color = '#ff0000';
                     listaEtapa1.append(listaItemFailConnection);
                     delete btn.dataset.disabled;
