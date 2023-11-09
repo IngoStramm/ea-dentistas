@@ -345,11 +345,11 @@ add_action('wp_ajax_ea_dentistas_start_update', 'ea_dentistas_start_update');
 function ea_dentistas_start_update()
 {
     $listagem_wp = ea_dentistas_get_listagem_wp();
-    $listagem_api = ea_dentistas_get_listagem_api();
-    $posts_por_lotes = (int)ea_dentistas_get_option('ea_dentistas_posts_por_lote');
-    $lotes_wp = count($listagem_wp) / $posts_por_lotes;
+    // $listagem_api = ea_dentistas_get_listagem_api();
+    // $posts_por_lotes = (int)ea_dentistas_get_option('ea_dentistas_posts_por_lote');
+    // $lotes_wp = count($listagem_wp) / $posts_por_lotes;
     $msg = 'Iniciando processo de atualização...';
-    $response = array('success' => true, 'msg' => $msg, 'lotes_wp' => ceil($lotes_wp));
+    $response = array('success' => true, 'msg' => $msg);
     wp_send_json($response);
 }
 

@@ -289,6 +289,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 } else {
                     const listaItemFailConnection = document.createElement('li');
                     listaItemFailConnection.innerText = 'Ocorreu um erro de conexão.';
+                    listaItemFailConnection.style.color = '#ff0000';
                     listaEtapa1.append(listaItemFailConnection);
                     delete btn.dataset.disabled;
                     btn.innerText = 'Atualizar dentistas';
