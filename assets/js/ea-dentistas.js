@@ -458,14 +458,10 @@ function eaDentistasListagem() {
     const searchEstado = document.getElementById('pesquisar-por-estado');
     const searchBairro = document.getElementById('pesquisar-por-bairro');
 
-    if (bairroUsuario) {
-        // console.log('cepUsuario', cepUsuario);
-        // console.log('bairroUsuario', bairroUsuario);
-        // console.log('todosDentistas', todosDentistas);
-        listaDentistas.search(bairroUsuario, ['bairro']);
-        if (typeof searchBairro !== undefined && searchBairro) {
-            searchBairro.value = bairroUsuario;
-        }
+    if (bairroUsuario && cidadeUsuario) {
+        listaDentistas.search(`${bairroUsuario} ${cidadeUsuario}`, ['endereco_completo']);
+        searchBairro.value = bairroUsuario;
+        searchCidade.value = cidadeUsuario;
     }
 
     searchCidade.addEventListener('keyup', e => {

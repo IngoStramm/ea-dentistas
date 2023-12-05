@@ -15,7 +15,7 @@ function ea_dentistas_frontend_scripts()
 
     wp_register_script('list-js', EA_DENTISTAS_URL . 'assets/js/list' . $min . '.js', array('jquery'), '1.0.0', true);
 
-    wp_register_script('ea-dentistas-script', EA_DENTISTAS_URL . 'assets/js/ea-dentistas' . $min . '.js', array('jquery', 'list-js'), '1.0.4', true);
+    wp_register_script('ea-dentistas-script', EA_DENTISTAS_URL . 'assets/js/ea-dentistas' . $min . '.js', array('jquery', 'list-js'), '1.0.5', true);
 
     wp_enqueue_script('ea-dentistas-script');
 
