@@ -1,6 +1,6 @@
 {
   "name": "ea-dentistas",
-  "version": "1.0.16",
+  "version": "1.0.17",
   "description": "Plugin Model to start a plugin for WordPress",
   "main": "Gruntfile.js",
   "scripts": {

@@ -58,6 +58,7 @@ function ea_dentistas_listagem()
     $output .=      '<div class="lista-dentistas-filtros">';
     $output .=      '<input type="text" id="pesquisar-por-cidade" placeholder="' . __('Pesquisar por cidade', 'ea-dentista') . '" />';
     $output .=      '<input type="text" id="pesquisar-por-estado" placeholder="' . __('Pesquisar por Estado', 'ea-dentista') . '" />';
+    $output .=      '<input type="text" id="pesquisar-por-bairro" placeholder="' . __('Pesquisar por bairro', 'ea-dentista') . '" />';
     $output .=      '</div>';
 
     $output .= '<ul class="pagination pagination-top"></ul>';
@@ -93,6 +94,8 @@ function ea_dentistas_autocomplete()
     $output .=      '<input name="lng" type="hidden" required />';
     $output .=      '<input name="estado" type="hidden" required />';
     $output .=      '<input name="cidade" type="hidden" required />';
+    $output .=      '<input name="cep" type="hidden" required />';
+    $output .=      '<input name="bairro" type="hidden" required />';
     $output .=      '<button>' . __('Enviar', 'ea-dentistas') . '</button>';
     $output .= '</form>';
     return $output;

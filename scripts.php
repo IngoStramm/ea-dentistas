@@ -26,7 +26,9 @@ function ea_dentistas_frontend_scripts()
         'lat' => isset($_POST['lat']) ? $_POST['lat'] : null,
         'lng' => isset($_POST['lng']) ? $_POST['lng'] : null,
         'estado' => isset($_POST['estado']) ? $_POST['estado'] : null,
-        'cidade' => isset($_POST['cidade']) ? $_POST['cidade'] : null
+        'cidade' => isset($_POST['cidade']) ? $_POST['cidade'] : null,
+        'cep' => isset($_POST['cep']) ? $_POST['cep'] : null,
+        'bairro' => isset($_POST['bairro']) ? $_POST['bairro'] : null
 
     ));
     wp_enqueue_style('ea-dentistas-style', EA_DENTISTAS_URL . 'assets/css/ea-dentistas.css', array(), '1.0.1', 'all');

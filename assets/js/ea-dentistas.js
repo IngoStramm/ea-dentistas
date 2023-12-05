@@ -11,7 +11,6 @@ const itensNaoDestaques = itemsLista.filter(item => item.destaque !== 'on');
 // novo array com os destaques em primeiro lugar
 // const todosDentistas = itemsDestaques.concat(itensNaoDestaques);
 const todosDentistas = itemsLista;
-// console.log('todosDentistas', todosDentistas);
 
 function removeAccents(str) {
     return str.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -22,6 +21,8 @@ lng = ajax_object.lng;
 
 const estadoUsuario = ajax_object.estado ? removeAccents(ajax_object.estado.toUpperCase()) : '';
 const cidadeUsuario = ajax_object.cidade ? removeAccents(ajax_object.cidade.toUpperCase()) : '';
+const cepUsuario = ajax_object.cep ? ajax_object.cep.replace(/\D/g, '') : '';
+const bairroUsuario = ajax_object.bairro ? removeAccents(ajax_object.bairro.toUpperCase()) : '';
 // console.log('estadoUsuario', estadoUsuario);
 // console.log('cidadeUsuario', cidadeUsuario);
 
@@ -145,6 +146,8 @@ function onPlaceChanged() {
     const lngInput = eaAutocompleteForm.querySelector('input[name="lng"]');
     const stateInput = eaAutocompleteForm.querySelector('input[name="estado"]');
     const cidadeInput = eaAutocompleteForm.querySelector('input[name="cidade"]');
+    const cepInput = eaAutocompleteForm.querySelector('input[name="cep"]');
+    const bairroInput = eaAutocompleteForm.querySelector('input[name="bairro"]');
 
     if (typeof eaAutocompleteForm === undefined || !eaAutocompleteForm) {
         console.error('Não foi possível encontrar o formulário do autocomplete');
@@ -171,19 +174,34 @@ function onPlaceChanged() {
         return;
     }
 
+    if (typeof cepInput === undefined || !cepInput) {
+        console.error('Não foi possível encontrar o input de CEP');
+        return;
+    }
+
+    if (typeof bairroInput === undefined || !bairroInput) {
+        console.error('Não foi possível encontrar o input de bairro');
+        return;
+    }
+
     if (!place.geometry) {
         document.getElementById('autocomplete').placeholder = 'Digite um endereço';
         latInput.value = '';
         lngInput.value = '';
         stateInput.value = '';
         cidadeInput.value = '';
+        cepInput.value = '';
+        bairroInput.value = '';
     } else {
         lat = place.geometry.location.lat();
         lng = place.geometry.location.lng();
         // console.log('lat', lat);
         // console.log('lng', lng);
+        console.log('place.address_components', place.address_components);
         const estado = place.address_components.filter(item => item.types.includes('administrative_area_level_1'));
         const cidade = place.address_components.filter(item => item.types.includes('administrative_area_level_2'));
+        const cep = place.address_components.filter(item => item.types.includes('postal_code'));
+        const bairro = place.address_components.filter(item => item.types.includes('sublocality_level_1'));
         // console.log('estado', estado[0].short_name);
         // console.log('cidade', cidade[0].short_name);
         document.getElementById('autocomplete').innerHTML = place.name;
@@ -191,6 +209,8 @@ function onPlaceChanged() {
         lngInput.value = lng;
         stateInput.value = estado[0].short_name;
         cidadeInput.value = cidade[0].short_name;
+        cepInput.value = cep[0].short_name;
+        bairroInput.value = bairro[0].short_name;
     }
 }
 
@@ -360,7 +380,9 @@ function eaDentistasListagem() {
             'nome',
             'endereco_completo',
             'telefone_contato',
-            'destaque'
+            'destaque',
+            'cep',
+            'bairro'
         ],
         page: 10,
         pagination: [{
@@ -404,6 +426,8 @@ function eaDentistasListagem() {
         <li class="${destaque}">
             <input class="cidade" type="hidden" />
             <input class="estado" type="hidden" />
+            <input class="cep" type="hidden" />
+            <input class="bairro" type="hidden" />
             <h3>${showIcon}<span class="nome"></span></h3>
             <p class="endereco_completo"></p>
             <ul class="contatos">
@@ -417,30 +441,51 @@ function eaDentistasListagem() {
     const listaDentistas = new List('lista-dentistas', options, todosDentistas);
 
     listaDentistas.sort('nome', { alphabet: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÀàÁáÃãÂâÉéÈèÍíÓóÚúÇç" });
+    // listaDentistas.sort('cep');
 
     // Reordena pelos destaques
     // listaDentistas.sort(['destaque'], { order: 'desc' }, { alphabet: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÀàÁáÃãÂâÉéÈèÍíÓóÚúÇç" });
 
-    if (cidadeUsuario) {
-        listaDentistas.search(cidadeUsuario, ['cidade']);
-        const pesquisarPorCidadeInput = document.getElementById('pesquisar-por-cidade');
-        if (typeof pesquisarPorCidadeInput !== undefined && pesquisarPorCidadeInput) {
-            pesquisarPorCidadeInput.value = cidadeUsuario;
-        }
-    }
+    // if (cidadeUsuario) {
+    //     listaDentistas.search(cidadeUsuario, ['cidade']);
+    //     const pesquisarPorCidadeInput = document.getElementById('pesquisar-por-cidade');
+    //     if (typeof pesquisarPorCidadeInput !== undefined && pesquisarPorCidadeInput) {
+    //         pesquisarPorCidadeInput.value = cidadeUsuario;
+    //     }
+    // }
 
     const searchCidade = document.getElementById('pesquisar-por-cidade');
     const searchEstado = document.getElementById('pesquisar-por-estado');
+    const searchBairro = document.getElementById('pesquisar-por-bairro');
+
+    if (bairroUsuario) {
+        // console.log('cepUsuario', cepUsuario);
+        // console.log('bairroUsuario', bairroUsuario);
+        // console.log('todosDentistas', todosDentistas);
+        listaDentistas.search(bairroUsuario, ['bairro']);
+        if (typeof searchBairro !== undefined && searchBairro) {
+            searchBairro.value = bairroUsuario;
+        }
+    }
 
     searchCidade.addEventListener('keyup', e => {
         const s = removeAccents(e.target.value);
         listaDentistas.search(s, ['cidade']);
         searchEstado.value = '';
+        searchBairro.value = '';
     });
 
     searchEstado.addEventListener('keyup', e => {
         const s = removeAccents(e.target.value);
         listaDentistas.search(s, ['estado']);
+        searchCidade.value = '';
+        searchBairro.value = '';
+    });
+
+    searchBairro.addEventListener('keyup', e => {
+        const s = removeAccents(e.target.value);
+        listaDentistas.search(s, ['bairro']);
+        searchEstado.value = '';
         searchCidade.value = '';
     });
 
