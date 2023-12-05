@@ -29,7 +29,7 @@ function ea_dentistas_frontend_scripts()
         'cidade' => isset($_POST['cidade']) ? $_POST['cidade'] : null
 
     ));
-    wp_enqueue_style('ea-dentistas-style', EA_DENTISTAS_URL . 'assets/css/ea-dentistas.css', array(), '1.0.0', 'all');
+    wp_enqueue_style('ea-dentistas-style', EA_DENTISTAS_URL . 'assets/css/ea-dentistas.css', array(), '1.0.1', 'all');
 
     $gmaps_key = ea_dentistas_get_option('gmaps_key');
 
