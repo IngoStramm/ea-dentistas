@@ -8,7 +8,9 @@ const markers = {};
 const itemsLista = Object.values(ajax_object.listagem);
 const itemsDestaques = itemsLista.filter(item => item.destaque === 'on');
 const itensNaoDestaques = itemsLista.filter(item => item.destaque !== 'on');
-const todosDentistas = itemsDestaques.concat(itensNaoDestaques);
+// novo array com os destaques em primeiro lugar
+// const todosDentistas = itemsDestaques.concat(itensNaoDestaques);
+const todosDentistas = itemsLista;
 // console.log('todosDentistas', todosDentistas);
 
 function removeAccents(str) {
@@ -374,9 +376,13 @@ function eaDentistasListagem() {
             item: `<li><a class='page'></a></li>`
         }],
         item: function (values) {
-            const destaque = values.destaque === 'on' ? 'destaque' : '';
+            // classe destaque no item
+            // const destaque = values.destaque === 'on' ? 'destaque' : '';
+            const destaque = '';
             const iconStar = `<span class="icon-destaque"></span>`;
-            const showIcon = values.destaque === 'on' ? iconStar : '';
+            // ícone de destaque
+            // const showIcon = values.destaque === 'on' ? iconStar : '';
+            const showIcon = '';
             const telExibicao = () => {
                 const numero = values.telefone_contato;
                 let parte1 = '';
@@ -412,7 +418,8 @@ function eaDentistasListagem() {
 
     listaDentistas.sort('nome', { alphabet: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÀàÁáÃãÂâÉéÈèÍíÓóÚúÇç" });
 
-    listaDentistas.sort(['destaque'], { order: 'desc' }, { alphabet: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÀàÁáÃãÂâÉéÈèÍíÓóÚúÇç" });
+    // Reordena pelos destaques
+    // listaDentistas.sort(['destaque'], { order: 'desc' }, { alphabet: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÀàÁáÃãÂâÉéÈèÍíÓóÚúÇç" });
 
     if (cidadeUsuario) {
         listaDentistas.search(cidadeUsuario, ['cidade']);

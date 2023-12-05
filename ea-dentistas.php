@@ -4,7 +4,7 @@
  * Plugin Name: EA Dentistas
  * Plugin URI: https://agencialaf.com
  * Description: Descrição do EA Dentistas.
- * Version: 0.0.13
+ * Version: 0.0.14
  * Author: Ingo Stramm
  * Text Domain: ea-dentistas
  * License: GPLv2
