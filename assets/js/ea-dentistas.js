@@ -399,12 +399,12 @@ function eaDentistasListagem() {
         }],
         item: function (values) {
             // classe destaque no item
-            // const destaque = values.destaque === 'on' ? 'destaque' : '';
-            const destaque = '';
+            const destaque = values.destaque === 'on' ? 'destaque' : '';
+            // const destaque = '';
             const iconStar = `<span class="icon-destaque"></span>`;
             // ícone de destaque
-            // const showIcon = values.destaque === 'on' ? iconStar : '';
-            const showIcon = '';
+            const showIcon = values.destaque === 'on' ? iconStar : '';
+            // const showIcon = '';
             const telExibicao = () => {
                 const numero = values.telefone_contato;
                 let parte1 = '';
@@ -444,7 +444,7 @@ function eaDentistasListagem() {
     // listaDentistas.sort('cep');
 
     // Reordena pelos destaques
-    // listaDentistas.sort(['destaque'], { order: 'desc' }, { alphabet: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÀàÁáÃãÂâÉéÈèÍíÓóÚúÇç" });
+    listaDentistas.sort(['destaque'], { order: 'desc' }, { alphabet: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÀàÁáÃãÂâÉéÈèÍíÓóÚúÇç" });
 
     // if (cidadeUsuario) {
     //     listaDentistas.search(cidadeUsuario, ['cidade']);

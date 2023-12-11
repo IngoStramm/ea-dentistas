@@ -8,6 +8,7 @@ function ea_dentistas_frontend_scripts()
     $min = (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1', '10.0.0.3'))) ? '' : '.min';
     $state = isset($_POST['state']) ? $_POST['state'] : null;
     $listagem = ea_dentistas_get_listagem_wp();
+    $version = '1.0.6';
 
     if (empty($min)) :
         wp_enqueue_script('ea-dentistas-livereload', 'http://localhost:35729/livereload.js?snipver=1', array(), null, true);
@@ -15,7 +16,7 @@ function ea_dentistas_frontend_scripts()
 
     wp_register_script('list-js', EA_DENTISTAS_URL . 'assets/js/list' . $min . '.js', array('jquery'), '1.0.0', true);
 
-    wp_register_script('ea-dentistas-script', EA_DENTISTAS_URL . 'assets/js/ea-dentistas' . $min . '.js', array('jquery', 'list-js'), '1.0.5', true);
+    wp_register_script('ea-dentistas-script', EA_DENTISTAS_URL . 'assets/js/ea-dentistas' . $min . '.js', array('jquery', 'list-js'), $version, true);
 
     wp_enqueue_script('ea-dentistas-script');
 
@@ -31,7 +32,7 @@ function ea_dentistas_frontend_scripts()
         'bairro' => isset($_POST['bairro']) ? $_POST['bairro'] : null
 
     ));
-    wp_enqueue_style('ea-dentistas-style', EA_DENTISTAS_URL . 'assets/css/ea-dentistas.css', array(), '1.0.1', 'all');
+    wp_enqueue_style('ea-dentistas-style', EA_DENTISTAS_URL . 'assets/css/ea-dentistas.css', array(), $version, 'all');
 
     $gmaps_key = ea_dentistas_get_option('gmaps_key');
 
@@ -45,13 +46,16 @@ function ea_dentistas_frontend_scripts()
 
 add_action('admin_enqueue_scripts', 'ea_dentistas_admin_scripts');
 
-function ea_dentistas_admin_scripts() {
+function ea_dentistas_admin_scripts()
+{
     if (!is_user_logged_in())
         return;
 
+    $version = '1.0.6';
+
     $min = (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1', '10.0.0.3'))) ? '' : '.min';
 
-    wp_register_script('ea-dentistas-admin-script', EA_DENTISTAS_URL . 'assets/js/ea-dentistas-admin' . $min . '.js', array('jquery'), '1.0.5', true);
+    wp_register_script('ea-dentistas-admin-script', EA_DENTISTAS_URL . 'assets/js/ea-dentistas-admin' . $min . '.js', array('jquery'), $version, true);
 
     wp_enqueue_script('ea-dentistas-admin-script');
 
