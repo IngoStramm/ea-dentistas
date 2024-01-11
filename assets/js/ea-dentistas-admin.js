@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', function () {
         xhr.onload = function () {
             const response = xhr.response;
             if (xhr.status === 200) {
-                if (!response.success) {
+                if (typeof response.success === null || !response.success) {
                     console.log('success', response.success);
                     console.log('msg', response.msg);
                     listaItemUpdatedPosts.innerText = response.msg;
