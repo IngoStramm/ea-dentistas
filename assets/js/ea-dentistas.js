@@ -440,7 +440,7 @@ function eaDentistasListagem() {
 
     const listaDentistas = new List('lista-dentistas', options, todosDentistas);
 
-    listaDentistas.sort('nome', { alphabet: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÀàÁáÃãÂâÉéÈèÍíÓóÚúÇç" });
+    // listaDentistas.sort('nome', { alphabet: "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvXxYyZzÀàÁáÃãÂâÉéÈèÍíÓóÚúÇç" });
     // listaDentistas.sort('cep');
 
     // Reordena pelos destaques
@@ -458,11 +458,11 @@ function eaDentistasListagem() {
     const searchEstado = document.getElementById('pesquisar-por-estado');
     const searchBairro = document.getElementById('pesquisar-por-bairro');
 
-    if (bairroUsuario && cidadeUsuario) {
-        listaDentistas.search(`${bairroUsuario} ${cidadeUsuario}`, ['endereco_completo']);
-        searchBairro.value = bairroUsuario;
-        searchCidade.value = cidadeUsuario;
-    }
+    // if (bairroUsuario && cidadeUsuario) {
+    //     listaDentistas.search(`${bairroUsuario} ${cidadeUsuario}`, ['endereco_completo']);
+    //     searchBairro.value = bairroUsuario;
+    //     searchCidade.value = cidadeUsuario;
+    // }
 
     searchCidade.addEventListener('keyup', e => {
         const s = removeAccents(e.target.value);

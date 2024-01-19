@@ -315,7 +315,47 @@ function ea_dentistas_get_listagem_wp()
         }
     }
     wp_reset_postdata();
-    return $listagem;
+
+    // Limitando os resultados por cidade
+    $cidade_usuario = isset($_POST['cidade']) ? $_POST['cidade'] : null;
+    $estado_usuario = isset($_POST['estado']) ? $_POST['estado'] : null;
+    $listagem_filtrada = [];
+
+    // Parei aqui
+    // Verificando se os filtros/verificações de cidade, estado estão funcionando
+    if ($cidade_usuario) {
+        $listagem_filtrada = ea_dentistas_filter_list($listagem, 'cidade', $cidade_usuario);
+    }
+
+    if (!count($listagem_filtrada) && $estado_usuario) {
+        $listagem_filtrada = ea_dentistas_filter_list($listagem, 'estado', $estado_usuario);
+    }
+
+    if (!count($listagem_filtrada)) {
+        $listagem_filtrada = $listagem;
+    }
+
+    // Reordenando por proximidade
+    $latitude = isset($_POST['lat']) ? $_POST['lat'] : null;
+    $longitude = isset($_POST['lng']) ? $_POST['lng'] : null;
+    $listagem_ordenada = ($latitude && $longitude) ? ea_dentistas_sort_by_nearest_location($listagem_filtrada, $latitude, $longitude) : $listagem_filtrada;
+
+    return $listagem_ordenada;
+}
+
+function ea_dentistas_filter_list($listagem, $filtro, $valor)
+{
+    $lista_filtrada = [];
+    $valor = remove_accents($valor);
+    $valor = strtoupper($valor);
+    foreach ($listagem as $codigo => $item) {
+        // ea_dentistas_debug($item[$filtro]);
+        // ea_dentistas_debug($valor);
+        if ($item[$filtro] === $valor) {
+            $lista_filtrada[$codigo] = $item;
+        }
+    }
+    return $lista_filtrada;
 }
 
 function ea_dentistas_get_listagem_original($state = null)
@@ -586,9 +626,9 @@ function ea_dentistas_update_addresses()
         $lng = get_post_meta($post_id, 'ea_dentista_lng', true);
 
         if ($lat && $lng) {
-                continue;
+            continue;
         }
-        
+
         $coordinates = ea_dentistas_get_lat_lng_from_google_by_address($address);
 
         $updated_metas = [];
@@ -857,7 +897,7 @@ function ea_dentistas_sort_by_nearest_location($listagem, $latitude, $longitude)
 {
     if ($latitude && $longitude) { // $latitude && $longitude are user's coordinates
         foreach ($listagem as &$item) {
-            $item['distance'] = ea_denstistas_get_distance($latitude, $longitude, $item['lat'], $item['long']);
+            $item['distance'] = ea_denstistas_get_distance($latitude, $longitude, $item['lat'], $item['lng']);
         }
 
         usort($listagem, function ($a, $b) {
@@ -874,11 +914,11 @@ function teste()
     $json_url = ea_dentistas_get_option('json_url');
     $dentistas_page_id = ea_dentistas_get_option('dentistas_page_id');
     // ea_dentistas_update_listagem();
-    // ea_dentistas_debug(count(ea_dentistas_get_listagem_wp()));
+    ea_dentistas_debug(ea_dentistas_get_listagem_wp());
     // ea_dentistas_delete_posts();
     // ea_dentistas_register_new_posts();
     // ea_dentistas_update_existing_posts();
-    ea_dentistas_debug(ea_dentistas_update_addresses());
+    // ea_dentistas_debug(ea_dentistas_update_addresses());
 }
 
 // add_action('wp_head', 'teste');
