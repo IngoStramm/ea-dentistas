@@ -207,10 +207,11 @@ function onPlaceChanged() {
         document.getElementById('autocomplete').innerHTML = place.name;
         latInput.value = lat;
         lngInput.value = lng;
-        stateInput.value = estado[0].short_name;
-        cidadeInput.value = cidade[0].short_name;
-        cepInput.value = cep[0].short_name;
-        bairroInput.value = bairro[0].short_name;
+        stateInput.value = estado[0]?.short_name;
+        cidadeInput.value = cidade[0]?.short_name;
+        cepInput.value = cep[0]?.short_name;
+        bairroInput.value = bairro[0]?.short_name;
+        console.log('stateInput.value: ', stateInput.value);
     }
 }
 
@@ -464,26 +465,26 @@ function eaDentistasListagem() {
     //     searchCidade.value = cidadeUsuario;
     // }
 
-    searchCidade.addEventListener('keyup', e => {
-        const s = removeAccents(e.target.value);
-        listaDentistas.search(s, ['cidade']);
-        searchEstado.value = '';
-        searchBairro.value = '';
-    });
+    // searchCidade.addEventListener('keyup', e => {
+    //     const s = removeAccents(e.target.value);
+    //     listaDentistas.search(s, ['cidade']);
+    //     searchEstado.value = '';
+    //     searchBairro.value = '';
+    // });
 
-    searchEstado.addEventListener('keyup', e => {
-        const s = removeAccents(e.target.value);
-        listaDentistas.search(s, ['estado']);
-        searchCidade.value = '';
-        searchBairro.value = '';
-    });
+    // searchEstado.addEventListener('keyup', e => {
+    //     const s = removeAccents(e.target.value);
+    //     listaDentistas.search(s, ['estado']);
+    //     searchCidade.value = '';
+    //     searchBairro.value = '';
+    // });
 
-    searchBairro.addEventListener('keyup', e => {
-        const s = removeAccents(e.target.value);
-        listaDentistas.search(s, ['bairro']);
-        searchEstado.value = '';
-        searchCidade.value = '';
-    });
+    // searchBairro.addEventListener('keyup', e => {
+    //     const s = removeAccents(e.target.value);
+    //     listaDentistas.search(s, ['bairro']);
+    //     searchEstado.value = '';
+    //     searchCidade.value = '';
+    // });
 
     const btns = document.querySelectorAll('.listagem-item-btn');
     for (const btn of btns) {

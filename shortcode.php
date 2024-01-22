@@ -55,11 +55,11 @@ function ea_dentistas_listagem()
     $output .=      '<div id="left-col" class="listagem-col">';
     $output .=      '<div id="lista-dentistas">';
 
-    $output .=      '<div class="lista-dentistas-filtros">';
-    $output .=      '<input type="text" id="pesquisar-por-cidade" placeholder="' . __('Pesquisar por cidade', 'ea-dentista') . '" />';
-    $output .=      '<input type="text" id="pesquisar-por-estado" placeholder="' . __('Pesquisar por Estado', 'ea-dentista') . '" />';
-    $output .=      '<input type="text" id="pesquisar-por-bairro" placeholder="' . __('Pesquisar por bairro', 'ea-dentista') . '" />';
-    $output .=      '</div>';
+    // $output .=      '<div class="lista-dentistas-filtros">';
+    // $output .=      '<input type="text" id="pesquisar-por-cidade" placeholder="' . __('Pesquisar por cidade', 'ea-dentista') . '" />';
+    // $output .=      '<input type="text" id="pesquisar-por-estado" placeholder="' . __('Pesquisar por Estado', 'ea-dentista') . '" />';
+    // $output .=      '<input type="text" id="pesquisar-por-bairro" placeholder="' . __('Pesquisar por bairro', 'ea-dentista') . '" />';
+    // $output .=      '</div>';
 
     $output .= '<ul class="pagination pagination-top"></ul>';
 
