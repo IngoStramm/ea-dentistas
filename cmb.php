@@ -53,6 +53,15 @@ function ea_register_dentista_metabox()
     ));
 
     $dentista->add_field(array(
+        'name'       => esc_html__('Complemento', 'ea'),
+        'id'         => 'ea_dentista_complemento',
+        'type'       => 'text',
+        'attributes' => array(
+            'required' => true
+        )
+    ));
+
+    $dentista->add_field(array(
         'name'       => esc_html__('Bairro', 'ea'),
         'id'         => 'ea_dentista_bairro',
         'type'       => 'text_medium',

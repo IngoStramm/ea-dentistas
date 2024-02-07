@@ -34,9 +34,13 @@ function ea_lista_ufs()
     return $ufs;
 }
 
-function ea_dentistas_endereco_completo($endereco, $numero, $bairro, $cep, $cidade, $estado)
+function ea_dentistas_endereco_completo($endereco, $numero, $complemento, $bairro, $cep, $cidade, $estado)
 {
-    $address = rtrim(trim($endereco), ',')  . ', ' . trim($numero) . ' - ' . trim($bairro) . ' - ' . trim($cep) . ' - ' . trim($cidade) . '/' . trim($estado);
+    $address = rtrim(trim($endereco), ',')  . ', ' . trim($numero);
+    if ($complemento) {
+        $address .= ' - ' . trim($complemento);
+    }
+    $address .= ' - ' . trim($bairro) . ' - ' . trim($cep) . ' - ' . trim($cidade) . '/' . trim($estado);
     return $address;
 }
 
@@ -196,6 +200,7 @@ function ea_dentistas_get_listagem_api()
             trim($item['BLOQUEADO']) !== 'N' ||
             !rtrim(trim($item['ENDERECO'])) ||
             !trim($item['NUMERO']) ||
+            !trim($item['COMPLEMENTO']) ||
             !trim($item['CEP']) ||
             !trim($item['MUNICIPIO']) ||
             !trim($item['ESTADO']) ||
@@ -222,7 +227,7 @@ function ea_dentistas_get_listagem_api()
             continue;
         }
 
-        $address = ea_dentistas_endereco_completo($item['ENDERECO'], $item['NUMERO'], $item['BAIRRO'], $item['CEP'], $item['MUNICIPIO'], $item['ESTADO']);
+        $address = ea_dentistas_endereco_completo($item['ENDERECO'], $item['NUMERO'], $item['COMPLEMENTO'], $item['BAIRRO'], $item['CEP'], $item['MUNICIPIO'], $item['ESTADO']);
 
         // $address_encoded = urlencode($address);
         // $geocode = file_get_contents('https://maps.google.com/maps/api/geocode/json?key=' . $geocode_key . '&address=' . $address_encoded . '&sensor=false');
@@ -243,6 +248,7 @@ function ea_dentistas_get_listagem_api()
             'codigo' => trim($item['CODIGO']),
             'endereco' => rtrim(trim($item['ENDERECO']), ','),
             'numero' => trim($item['NUMERO']),
+            'complemento' => trim($item['COMPLEMENTO']),
             'bairro' => trim($item['BAIRRO']),
             'cidade' => trim($item['MUNICIPIO']),
             'estado' => trim($item['ESTADO']),
@@ -476,6 +482,7 @@ function ea_dentistas_register_new_posts()
                 'ea_dentista_cro' => $dentista['cro'],
                 'ea_dentista_endereco' => $dentista['endereco'],
                 'ea_dentista_numero' => $dentista['numero'],
+                'ea_dentista_complemento' => $dentista['complemento'],
                 'ea_dentista_bairro' => $dentista['bairro'],
                 'ea_dentista_cidade' => $dentista['cidade'],
                 'ea_dentista_estado' => $dentista['estado'],
@@ -559,6 +566,7 @@ function ea_dentistas_update_existing_posts()
         $updated['cro'] = update_post_meta($post_id, 'ea_dentista_cro', $dentista['cro']);
         $updated['endereco'] = update_post_meta($post_id, 'ea_dentista_endereco', $dentista['endereco']);
         $updated['numero'] = update_post_meta($post_id, 'ea_dentista_numero', $dentista['numero']);
+        $updated['complemento'] = update_post_meta($post_id, 'ea_dentista_complemento', $dentista['complemento']);
         $updated['bairro'] = update_post_meta($post_id, 'ea_dentista_bairro', $dentista['bairro']);
         $updated['cidade'] = update_post_meta($post_id, 'ea_dentista_cidade', $dentista['cidade']);
         $updated['estado'] = update_post_meta($post_id, 'ea_dentista_estado', $dentista['estado']);
@@ -723,6 +731,7 @@ function ea_dentistas_update_listagem()
                     'ea_dentista_cro' => $dentista['cro'],
                     'ea_dentista_endereco' => $dentista['endereco'],
                     'ea_dentista_numero' => $dentista['numero'],
+                    'ea_dentista_complemento' => $dentista['complemento'],
                     'ea_dentista_bairro' => $dentista['bairro'],
                     'ea_dentista_cidade' => $dentista['cidade'],
                     'ea_dentista_estado' => $dentista['estado'],
@@ -786,6 +795,7 @@ function ea_dentistas_update_listagem()
             $updated['cro'] = update_post_meta($post_id, 'ea_dentista_cro', $dentista['cro']);
             $updated['endereco'] = update_post_meta($post_id, 'ea_dentista_endereco', $dentista['endereco']);
             $updated['numero'] = update_post_meta($post_id, 'ea_dentista_numero', $dentista['numero']);
+            $updated['complemento'] = update_post_meta($post_id, 'ea_dentista_complemento', $dentista['complemento']);
             $updated['bairro'] = update_post_meta($post_id, 'ea_dentista_bairro', $dentista['bairro']);
             $updated['cidade'] = update_post_meta($post_id, 'ea_dentista_cidade', $dentista['cidade']);
             $updated['estado'] = update_post_meta($post_id, 'ea_dentista_estado', $dentista['estado']);
