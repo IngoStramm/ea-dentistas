@@ -893,10 +893,10 @@ function ea_dentistas_filter_listagem_by_state($listagem, $state)
 
 function ea_denstistas_get_distance($fromLatitude, $fromLongitude, $toLatitude, $toLongitude, $radius = 6371000)
 { // Vincenty's formula
-    $fromLatitude = deg2rad($fromLatitude);
-    $fromLongitude = deg2rad($fromLongitude);
-    $toLatitude = deg2rad($toLatitude);
-    $toLongitude = deg2rad($toLongitude);
+    $fromLatitude = deg2rad((float)$fromLatitude);
+    $fromLongitude = deg2rad((float)$fromLongitude);
+    $toLatitude = deg2rad((float)$toLatitude);
+    $toLongitude = deg2rad((float)$toLongitude);
 
     $deltaLongitude = abs($fromLongitude - $toLongitude);
 

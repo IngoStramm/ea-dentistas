@@ -169,6 +169,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function ea_atualiza_coordenadas(btn) {
+        console.log('iniciando ea_atualiza_coordenadas');
+
         listaEtapa4 = document.getElementById('ea-dentista-lista-etapa-4');
         if (typeof listaEtapa4 === undefined || !listaEtapa4) {
             return;
@@ -226,11 +228,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     setTimeout(() => {
                         if (timer <= 0) {
                             str = `Retomando Etapa 4.`;
-                            div.innerText = str;
+                            listaItemUpdatedPosts.innerText = str;
                             return ea_atualiza_coordenadas(btn);
                         }
                         timer--;
-                        div.innerText = str;
+                        listaItemUpdatedPosts.innerText = str;
                         contagemRegressiva(timer);
                     }, 1000);
                 };
