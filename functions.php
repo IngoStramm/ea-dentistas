@@ -200,7 +200,6 @@ function ea_dentistas_get_listagem_api()
             trim($item['BLOQUEADO']) !== 'N' ||
             !rtrim(trim($item['ENDERECO'])) ||
             !trim($item['NUMERO']) ||
-            !trim($item['COMPLEMENTO']) ||
             !trim($item['CEP']) ||
             !trim($item['MUNICIPIO']) ||
             !trim($item['ESTADO']) ||
@@ -924,7 +923,7 @@ function teste()
     $json_url = ea_dentistas_get_option('json_url');
     $dentistas_page_id = ea_dentistas_get_option('dentistas_page_id');
     // ea_dentistas_update_listagem();
-    ea_dentistas_debug(ea_dentistas_get_listagem_wp());
+    ea_dentistas_debug(ea_dentistas_get_listagem_api());
     // ea_dentistas_delete_posts();
     // ea_dentistas_register_new_posts();
     // ea_dentistas_update_existing_posts();
