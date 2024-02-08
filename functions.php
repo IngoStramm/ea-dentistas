@@ -284,6 +284,7 @@ function ea_dentistas_get_listagem_wp()
             $cro = get_post_meta($post_id, 'ea_dentista_cro', true);
             $endereco = get_post_meta($post_id, 'ea_dentista_endereco', true);
             $numero = get_post_meta($post_id, 'ea_dentista_numero', true);
+            $complemento = get_post_meta($post_id, 'ea_dentista_complemento', true);
             $bairro = get_post_meta($post_id, 'ea_dentista_bairro', true);
             $cidade = get_post_meta($post_id, 'ea_dentista_cidade', true);
             $estado = get_post_meta($post_id, 'ea_dentista_estado', true);
@@ -304,6 +305,7 @@ function ea_dentistas_get_listagem_wp()
                 'cro'                   => $cro,
                 'endereco'              => $endereco,
                 'numero'                => $numero,
+                'complemento'           => $complemento,
                 'bairro'                => $bairro,
                 'cidade'                => $cidade,
                 'estado'                => $estado,
@@ -320,6 +322,7 @@ function ea_dentistas_get_listagem_wp()
         }
     }
     wp_reset_postdata();
+    // return array();
 
     // Limitando os resultados por cidade
     $cidade_usuario = isset($_POST['cidade']) ? $_POST['cidade'] : null;
@@ -425,13 +428,13 @@ function ea_dentistas_delete_posts()
 
     // Dentistas do WP
     $listagem_wp = ea_dentistas_get_listagem_wp();
+
     if (!$listagem_wp) {
         $log[] = current_datetime()->format('d/m/Y H:i:s') . ': ' . __('Cadastro inicial', 'ea-dentistas');
     } else {
         $log[] = current_datetime()->format('d/m/Y H:i:s') . ': ' . __('Iniciando atualização', 'ea-dentistas');
     }
 
-    $deleted_post = [];
     foreach ($listagem_wp as $codigo => $dentista) {
         if (!isset($listagem_api[$codigo])) {
             $deleted_post = wp_delete_post($dentista['post_id']);
@@ -916,6 +919,36 @@ function ea_dentistas_sort_by_nearest_location($listagem, $latitude, $longitude)
     return $listagem;
 }
 
+function ea_dentistas_delete_all_posts()
+{
+    // Log
+    $log = [];
+
+    // Dentistas da API
+    $error_msg = null;
+    $deleted_posts = [];
+
+    // Dentistas do WP
+    $listagem_wp = ea_dentistas_get_listagem_wp();
+
+    if (!$listagem_wp) {
+        $response = array('success' => false, 'msg' => 'Não foi possível carregar as listagem de dentistas no site.');
+        wp_send_json($response);
+        return;
+    }
+
+    foreach ($listagem_wp as $codigo => $dentista) {
+        $deleted_post = wp_delete_post($dentista['post_id']);
+        $deleted_posts[] = $deleted_post->ID;
+    }
+
+    // $index_wp++;
+    $response = array('success' => true, 'deleted_posts' => $deleted_posts);
+    wp_send_json($response);
+    return;
+}
+
+
 function teste()
 {
     $gmaps_key = ea_dentistas_get_option('gmaps_key');
@@ -923,11 +956,12 @@ function teste()
     $json_url = ea_dentistas_get_option('json_url');
     $dentistas_page_id = ea_dentistas_get_option('dentistas_page_id');
     // ea_dentistas_update_listagem();
-    ea_dentistas_debug(ea_dentistas_get_listagem_api());
     // ea_dentistas_delete_posts();
     // ea_dentistas_register_new_posts();
     // ea_dentistas_update_existing_posts();
     // ea_dentistas_debug(ea_dentistas_update_addresses());
+    // ea_dentistas_debug(ea_dentistas_get_listagem_api());
+    // ea_dentistas_debug(ea_dentistas_delete_all_posts());
 }
 
 // add_action('wp_head', 'teste');
