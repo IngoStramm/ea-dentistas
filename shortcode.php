@@ -96,8 +96,9 @@ function ea_dentistas_autocomplete()
     $output .=      '<input name="cidade" type="hidden" required />';
     $output .=      '<input name="cep" type="hidden" required />';
     $output .=      '<input name="bairro" type="hidden" required />';
-    $output .=      '<button>' . __('Enviar', 'ea-dentistas') . '</button>';
+    $output .=      '<button id="ea-autocomplete-form-btn" disabled>' . __('Enviar', 'ea-dentistas') . '</button>';
     $output .= '</form>';
+    $output .= '<div id="autocomplete-message" class="autocomplete-message">' . __('Digite um endereço válido para fazer a pesquisa.', 'ea-dentistas') . '</div>';
     return $output;
 }
 

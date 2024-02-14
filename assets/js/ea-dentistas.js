@@ -136,6 +136,54 @@ function initAutocomplete() {
             fields: ['place_id', 'geometry', 'name', 'address_components']
         }
     );
+
+    autocompleteInput.addEventListener('change', e => {
+        const autocompleteFormBtn = document.getElementById('ea-autocomplete-form-btn');
+        const autocompleteMessage = document.getElementById('autocomplete-message');
+
+        if (typeof autocompleteFormBtn === undefined || !autocompleteFormBtn) {
+            console.error('Não foi possível encontrar o botão de envio do formulário');
+            return;
+        }
+
+        if (typeof autocompleteMessage === undefined || !autocompleteMessage) {
+            console.error('Não foi possível encontrar a <div> de alerta de mensagens.');
+            return;
+        }
+
+        autocompleteMessage.style.display = 'block';
+        autocompleteFormBtn.setAttribute('disabled', '');
+
+        /*
+
+        const latInput = document.querySelector('input[name="lat"]');
+        const lngInput = document.querySelector('input[name="lng"]');
+
+        if (typeof latInput === undefined || !latInput) {
+            console.error('Não foi possível encontrar o input de latitude');
+            return;
+        }
+
+        if (typeof lngInput === undefined || !lngInput) {
+            console.error('Não foi possível encontrar o input de longitude');
+            return;
+        }
+
+        if (typeof autocompleteFormBtn === undefined || !autocompleteFormBtn) {
+            console.error('Não foi possível encontrar o botão de envio do formulário');
+            return;
+        }
+
+        if (typeof autocompleteMessage !== undefined && autocompleteMessage) {
+            if (!autocompleteInput.value) {
+            } else {
+                autocompleteMessage.style.display = 'none';
+                autocompleteFormBtn.removeAttribute('disabled');
+            }
+        }
+        */
+    });
+
     autocomplete.addListener('place_changed', onPlaceChanged);
 }
 
@@ -148,6 +196,17 @@ function onPlaceChanged() {
     const cidadeInput = eaAutocompleteForm.querySelector('input[name="cidade"]');
     const cepInput = eaAutocompleteForm.querySelector('input[name="cep"]');
     const bairroInput = eaAutocompleteForm.querySelector('input[name="bairro"]');
+
+    const autocompleteFormBtn = document.getElementById('ea-autocomplete-form-btn');
+    const autocompleteMessage = document.getElementById('autocomplete-message');
+
+    if (typeof autocompleteFormBtn !== undefined && autocompleteFormBtn) {
+        autocompleteFormBtn.setAttribute('disabled', '');
+    }
+
+    if (typeof autocompleteMessage !== undefined && autocompleteMessage) {
+        autocompleteMessage.style.display = 'block';
+    }
 
     if (typeof eaAutocompleteForm === undefined || !eaAutocompleteForm) {
         console.error('Não foi possível encontrar o formulário do autocomplete');
@@ -192,12 +251,13 @@ function onPlaceChanged() {
         cidadeInput.value = '';
         cepInput.value = '';
         bairroInput.value = '';
+        autocompleteMessage.style.display = 'block';
+        autocompleteFormBtn.setAttribute('disabled', '');
     } else {
         lat = place.geometry.location.lat();
         lng = place.geometry.location.lng();
         // console.log('lat', lat);
         // console.log('lng', lng);
-        console.log('place.address_components', place.address_components);
         const estado = place.address_components.filter(item => item.types.includes('administrative_area_level_1'));
         const cidade = place.address_components.filter(item => item.types.includes('administrative_area_level_2'));
         const cep = place.address_components.filter(item => item.types.includes('postal_code'));
@@ -211,7 +271,8 @@ function onPlaceChanged() {
         cidadeInput.value = cidade[0]?.short_name;
         cepInput.value = cep[0]?.short_name;
         bairroInput.value = bairro[0]?.short_name;
-        console.log('stateInput.value: ', stateInput.value);
+        autocompleteMessage.style.display = 'none';
+        autocompleteFormBtn.removeAttribute('disabled');
     }
 }
 

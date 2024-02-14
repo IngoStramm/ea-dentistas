@@ -6,6 +6,8 @@
     --dourado: gold;
     --cinza-claro: #f0f0f0;
     --cinza-menos-claro: #e7e7e7;
+    --cinza: grey;
+    --alerta: rgb(155, 31, 31);
 }
 
 .ea-autocomplete-form {
@@ -40,6 +42,13 @@
     color: var(--branco);
     border-radius: 5px;
     border: none;
+    &:disabled {
+        background-color: var(--cinza);
+        cursor: not-allowed;
+        &:hover {
+            background-color: var(--cinza);
+        }
+    }
 }
 
 .ea-autocomplete-form button:hover,
@@ -49,6 +58,11 @@
     outline: none;
 }
 
+.autocomplete-message {
+    display: none;
+    font-size: 0.75em;
+    color: var(--alerta);
+}
 #map {
     width: 100%;
     height: 80vh;

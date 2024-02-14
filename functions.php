@@ -961,7 +961,8 @@ function teste()
     // ea_dentistas_update_existing_posts();
     // ea_dentistas_debug(ea_dentistas_update_addresses());
     // ea_dentistas_debug(ea_dentistas_get_listagem_api());
-    // ea_dentistas_debug(ea_dentistas_delete_all_posts());
+    // ea_dentistas_debug(ea_dentistas_delete_posts());
+    // ea_dentistas_debug(ea_dentistas_get_listagem_wp());
 }
 
 // add_action('wp_head', 'teste');
