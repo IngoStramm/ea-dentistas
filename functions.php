@@ -196,7 +196,7 @@ function ea_dentistas_get_listagem_api()
         // ea_dentistas_debug($item['CODIGO']);
         // ea_dentistas_debug($item['ENDERECO']);
         if (
-            trim($item['INDICADOR']) === 'N' ||
+            trim($item['INDICADOR']) !== 'S' ||
             trim($item['EXCLUIDO']) !== 'N' ||
             trim($item['BLOQUEADO']) !== 'N' ||
             !rtrim(trim($item['ENDERECO'])) ||
