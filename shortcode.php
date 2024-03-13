@@ -42,39 +42,52 @@ function ea_dentistas_get_xlxs()
 }
 add_shortcode('ea_xlxs', 'ea_dentistas_get_xlxs');
 
-function ea_dentistas_listagem()
+function ea_dentistas_listagem($atts)
 {
-    $estado = isset($_POST['estado']) ? $_POST['estado'] : null;
-    $cidade = isset($_POST['cidade']) ? $_POST['cidade'] : null;
+    $a = shortcode_atts(array(
+        'form' => false,
+    ), $atts);
+    $total_listagem_filtrada = count(ea_dentistas_get_listagem_wp(true));
     $output = '';
-    // $listagem = ea_dentistas_get_listagem_original($estado);
-    // if (!is_array($listagem)) {
-    //     return $listagem;
-    // }
-    $output .= '<section class="listagem-wrapper">';
-    $output .=      '<div id="left-col" class="listagem-col">';
-    $output .=      '<div id="lista-dentistas">';
+    if ($total_listagem_filtrada <= 0) {
+        $elementor_template_id = $a['form'];
+        if (!$elementor_template_id) {
+            $output .= '<h3>' . __('Nenhum resultado encontrado para o endereço pesquisado. Tente fazer uma nova busca com outro endereço.') . '</h3>';
+        } else {
+            $output .= do_shortcode('[elementor-template id="' . $elementor_template_id . '"]');
+        }
+    } else {
+        $estado = isset($_POST['estado']) ? $_POST['estado'] : null;
+        $cidade = isset($_POST['cidade']) ? $_POST['cidade'] : null;
+        // $listagem = ea_dentistas_get_listagem_original($estado);
+        // if (!is_array($listagem)) {
+        //     return $listagem;
+        // }
+        $output .= '<section class="listagem-wrapper">';
+        $output .=      '<div id="left-col" class="listagem-col">';
+        $output .=      '<div id="lista-dentistas">';
 
-    // $output .=      '<div class="lista-dentistas-filtros">';
-    // $output .=      '<input type="text" id="pesquisar-por-cidade" placeholder="' . __('Pesquisar por cidade', 'ea-dentista') . '" />';
-    // $output .=      '<input type="text" id="pesquisar-por-estado" placeholder="' . __('Pesquisar por Estado', 'ea-dentista') . '" />';
-    // $output .=      '<input type="text" id="pesquisar-por-bairro" placeholder="' . __('Pesquisar por bairro', 'ea-dentista') . '" />';
-    // $output .=      '</div>';
+        // $output .=      '<div class="lista-dentistas-filtros">';
+        // $output .=      '<input type="text" id="pesquisar-por-cidade" placeholder="' . __('Pesquisar por cidade', 'ea-dentista') . '" />';
+        // $output .=      '<input type="text" id="pesquisar-por-estado" placeholder="' . __('Pesquisar por Estado', 'ea-dentista') . '" />';
+        // $output .=      '<input type="text" id="pesquisar-por-bairro" placeholder="' . __('Pesquisar por bairro', 'ea-dentista') . '" />';
+        // $output .=      '</div>';
 
-    $output .= '<ul class="pagination pagination-top"></ul>';
+        $output .= '<ul class="pagination pagination-top"></ul>';
 
-    $output .=          '<ul id="listagem-items" class="list listagem-items pagination-list" aria-live="polite">';
-    $i = 0;
-    $output .=          '</ul>';
+        $output .=          '<ul id="listagem-items" class="list listagem-items pagination-list" aria-live="polite">';
+        $i = 0;
+        $output .=          '</ul>';
 
-    $output .= '<ul class="pagination pagination-bottom"></ul>';
+        $output .= '<ul class="pagination pagination-bottom"></ul>';
 
-    $output .=      '</div>';
-    $output .=      '</div>';
-    $output .=      '<div id="right-col" class="listagem-col">';
-    $output .=          '<div id="map"></div>';
-    $output .=      '</div>';
-    $output .= '</section>';
+        $output .=      '</div>';
+        $output .=      '</div>';
+        $output .=      '<div id="right-col" class="listagem-col">';
+        $output .=          '<div id="map"></div>';
+        $output .=      '</div>';
+        $output .= '</section>';
+    }
     return $output;
 }
 

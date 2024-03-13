@@ -76,7 +76,7 @@ function ea_dentistas_register_settings_options_submenu_for_page_post_type()
         'id'      => 'dentistas_page_id',
         'type'    => 'select',
         'show_option_none' => true,
-        'options' => function () {
+        'options_cb' => function () {
             $pages = get_pages();
             $options = [];
             foreach ($pages as $page) {
@@ -86,15 +86,16 @@ function ea_dentistas_register_settings_options_submenu_for_page_post_type()
         }
     ));
 
-    // $cmb->add_field(array(
-    //     'name'    => esc_html__('Quantos posts serão processados por vez', 'ea-dentistas'),
-    //     'id'      => 'ea_dentistas_posts_por_lote',
-    //     'type'    => 'text',
-    //     'attributes' => array(
-    //         'type' => 'number',
-    //         'min'   => 0
-    //     )
-    // ));
+    $cmb->add_field(array(
+        'name'    => esc_html__('Distância máxima em kilômetros para buscar um dentista.', 'ea-dentistas'),
+        'id'      => 'ea_dentistas_max_distance',
+        'type'    => 'text',
+        'default'   => 50,
+        'attributes' => array(
+            'type' => 'number',
+            'min'   => 1
+        )
+    ));
 }
 
 add_action('cmb2_admin_init', 'ea_dentistas_register_settings_options_submenu_for_page_post_type');

@@ -267,7 +267,13 @@ function ea_dentistas_get_listagem_api()
     return $listagem;
 }
 
-function ea_dentistas_get_listagem_wp()
+/**
+ * ea_dentistas_get_listagem_wp
+ *
+ * @param  boolean $filtrar
+ * @return array
+ */
+function ea_dentistas_get_listagem_wp($filtrar = false)
 {
     $args = array(
         'post_type'         => 'dentista',
@@ -330,24 +336,28 @@ function ea_dentistas_get_listagem_wp()
     $estado_usuario = isset($_POST['estado']) ? $_POST['estado'] : null;
     $listagem_filtrada = [];
 
-    // Parei aqui
     // Verificando se os filtros/verificações de cidade, estado estão funcionando
-    if ($cidade_usuario) {
-        $listagem_filtrada = ea_dentistas_filter_list($listagem, 'cidade', $cidade_usuario);
-    }
+    // if ($cidade_usuario) {
+    //     $listagem_filtrada = ea_dentistas_filter_list($listagem, 'cidade', $cidade_usuario);
+    // }
 
-    if (!count($listagem_filtrada) && $estado_usuario) {
-        $listagem_filtrada = ea_dentistas_filter_list($listagem, 'estado', $estado_usuario);
-    }
+    // if (!count($listagem_filtrada) && $estado_usuario) {
+    //     $listagem_filtrada = ea_dentistas_filter_list($listagem, 'estado', $estado_usuario);
+    // }
 
-    if (!count($listagem_filtrada)) {
-        $listagem_filtrada = $listagem;
-    }
+    // if (!count($listagem_filtrada)) {
+    //     $listagem_filtrada = $listagem;
+    // }
 
-    // Reordenando por proximidade
     $latitude = isset($_POST['lat']) ? $_POST['lat'] : null;
     $longitude = isset($_POST['lng']) ? $_POST['lng'] : null;
-    $listagem_ordenada = ($latitude && $longitude) ? ea_dentistas_sort_by_nearest_location($listagem_filtrada, $latitude, $longitude) : $listagem_filtrada;
+
+    $max_distance = intval(ea_dentistas_get_option('ea_dentistas_max_distance'));
+
+    $listagem_filtrada = $filtrar && $latitude && $longitude ? ea_dentistas_limita_por_distancia($listagem, $max_distance, $latitude, $longitude) : $listagem;
+
+    // Reordenando por proximidade
+    $listagem_ordenada = ($latitude && $longitude) ? ea_dentistas_sort_by_nearest_location($listagem_filtrada, $latitude, $longitude) : $listagem;
 
     return $listagem_ordenada;
 }
@@ -918,6 +928,39 @@ function ea_dentistas_sort_by_nearest_location($listagem, $latitude, $longitude)
         });
     }
     return $listagem;
+}
+
+function ea_dentistas_limita_por_distancia($listagem, $distancia_max, $latitude, $longitude, $radius = 6371000)
+{
+    $listagem_limitada = [];
+    foreach ($listagem as $k => $item) {
+        $item_lat = $item['lat'];
+        $item_lng = $item['lng'];
+        $get_distancia = ea_get_distance_between_two_locations($latitude, $longitude, $item_lat, $item_lng);
+        if ($get_distancia <= $distancia_max) {
+            $listagem_limitada[$k] = $item;
+        }
+    }
+    return $listagem_limitada;
+}
+
+function ea_get_distance_between_two_locations($latitude1, $longitude1, $latitude2, $longitude2, $unit = 'Km')
+{
+    $theta = $longitude1 - $longitude2;
+    $distance = sin(deg2rad($latitude1)) * sin(deg2rad($latitude2)) + cos(deg2rad($latitude1)) * cos(deg2rad($latitude2)) * cos(deg2rad($theta));
+
+    $distance = acos($distance);
+    $distance = rad2deg($distance);
+    $distance = $distance * 60 * 1.1515;
+
+    switch ($unit) {
+        case 'Mi':
+            break;
+        case 'Km':
+            $distance = $distance * 1.609344;
+    }
+
+    return (round($distance, 2));
 }
 
 function ea_dentistas_delete_all_posts()
