@@ -428,7 +428,7 @@ function ea_dentistas_delete_posts()
 
     // Error caso não encontre dentistas na API
     if (!$listagem_api) {
-        $error_msg = current_datetime()->format('d/m/Y H:i:s') . ': ' . __('Não foi possível se conectar com a API.', 'ea-dentistas');
+        $error_msg = current_datetime()->format('d/m/Y H:i:s') . ': ' . __('A API não retornou dentista válido.', 'ea-dentistas');
     } elseif (!is_array($listagem_api)) {
         $error_msg = current_datetime()->format('d/m/Y H:i:s') . ': ' . $listagem_api;
     }
@@ -1011,4 +1011,4 @@ function teste()
     // ea_dentistas_debug(ea_dentistas_get_listagem_wp());
 }
 
-// add_action('wp_head', 'teste');
+add_action('wp_head', 'teste');
