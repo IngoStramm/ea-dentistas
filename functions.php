@@ -344,16 +344,17 @@ function ea_dentistas_get_listagem_wp($filtrar = false)
     // Verificando se os filtros/verificações de cidade, estado estão funcionando
     if ($cidade_usuario) {
         $listagem_filtrada = ea_dentistas_filter_list($listagem, 'cidade', $cidade_usuario);
-    } else {
+    }
+    
+    // if (!count($listagem_filtrada) && $estado_usuario) {
+    //     $listagem_filtrada = ea_dentistas_filter_list($listagem, 'estado', $estado_usuario);
+    // }
 
-        // if (!count($listagem_filtrada) && $estado_usuario) {
-        //     $listagem_filtrada = ea_dentistas_filter_list($listagem, 'estado', $estado_usuario);
-        // }
+    // if (!count($listagem_filtrada)) {
+    //     $listagem_filtrada = $listagem;
+    // }
 
-        // if (!count($listagem_filtrada)) {
-        //     $listagem_filtrada = $listagem;
-        // }
-
+    if(count($listagem_filtrada) <= 0) {
         $listagem_filtrada = $filtrar && $latitude && $longitude ? ea_dentistas_limita_por_distancia($listagem, $max_distance, $latitude, $longitude) : $listagem;
     }
 
